@@ -1,0 +1,2873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_364eb15bcfd2f25839c0b243ce787c7a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_364eb15bcfd2f25839c0b243ce787c7a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_364eb15bcfd2f25839c0b243ce787c7a = L.map(
+                "map_364eb15bcfd2f25839c0b243ce787c7a",
+                {
+                    center: [-38.0, -63.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8ff590c50a11c42486cbb676b8ee4d03 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8ff590c50a11c42486cbb676b8ee4d03.addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+            var circle_marker_786b24e10043757aa917c8151131c455 = L.circleMarker(
+                [-32.65, -68.47],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_326b2aa892f41d7c210be9e70fca85fc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0b4c87f4bdc601b64c62253536460a1a = $(`<div id="html_0b4c87f4bdc601b64c62253536460a1a" style="width: 100.0%; height: 100.0%;"><b>Ruta 7 Peaje Desaguadero</b><br>Region: Corredor RN7</div>`)[0];
+                popup_326b2aa892f41d7c210be9e70fca85fc.setContent(html_0b4c87f4bdc601b64c62253536460a1a);
+            
+        
+
+        circle_marker_786b24e10043757aa917c8151131c455.bindPopup(popup_326b2aa892f41d7c210be9e70fca85fc)
+        ;
+
+        
+    
+    
+            circle_marker_786b24e10043757aa917c8151131c455.bindTooltip(
+                `<div>
+                     Ruta 7 Peaje Desaguadero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5980313f330f9282a7ef9514c9a76ab4 = L.circleMarker(
+                [-33.55, -67.18],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_b9f5080a3a33fa20793119fbd0a1acbd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b5478b90e1fd5f558e247ee7fbeff7f0 = $(`<div id="html_b5478b90e1fd5f558e247ee7fbeff7f0" style="width: 100.0%; height: 100.0%;"><b>Ruta 7 Peaje La Cumbre</b><br>Region: Corredor RN7</div>`)[0];
+                popup_b9f5080a3a33fa20793119fbd0a1acbd.setContent(html_b5478b90e1fd5f558e247ee7fbeff7f0);
+            
+        
+
+        circle_marker_5980313f330f9282a7ef9514c9a76ab4.bindPopup(popup_b9f5080a3a33fa20793119fbd0a1acbd)
+        ;
+
+        
+    
+    
+            circle_marker_5980313f330f9282a7ef9514c9a76ab4.bindTooltip(
+                `<div>
+                     Ruta 7 Peaje La Cumbre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e4a7a2bf0884f79bb313abf09fa2d5c = L.circleMarker(
+                [-33.67, -65.18],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_09596fb8a74d083f8234cfb4fef65cce = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b38c4ee70ce2567a8201365fc28bebd2 = $(`<div id="html_b38c4ee70ce2567a8201365fc28bebd2" style="width: 100.0%; height: 100.0%;"><b>Ruta 7 Peaje Justo Daract</b><br>Region: Corredor RN7</div>`)[0];
+                popup_09596fb8a74d083f8234cfb4fef65cce.setContent(html_b38c4ee70ce2567a8201365fc28bebd2);
+            
+        
+
+        circle_marker_1e4a7a2bf0884f79bb313abf09fa2d5c.bindPopup(popup_09596fb8a74d083f8234cfb4fef65cce)
+        ;
+
+        
+    
+    
+            circle_marker_1e4a7a2bf0884f79bb313abf09fa2d5c.bindTooltip(
+                `<div>
+                     Ruta 7 Peaje Justo Daract
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95319af832962aa5e875ed3b9e18ed11 = L.circleMarker(
+                [-31.65, -63.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_376575d54796cd2e26910c8ffe43286f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f39399be25b910d344c1cedf506e60e6 = $(`<div id="html_f39399be25b910d344c1cedf506e60e6" style="width: 100.0%; height: 100.0%;"><b>YPF Rio Segundo Ascendente</b><br>Region: Córdoba</div>`)[0];
+                popup_376575d54796cd2e26910c8ffe43286f.setContent(html_f39399be25b910d344c1cedf506e60e6);
+            
+        
+
+        circle_marker_95319af832962aa5e875ed3b9e18ed11.bindPopup(popup_376575d54796cd2e26910c8ffe43286f)
+        ;
+
+        
+    
+    
+            circle_marker_95319af832962aa5e875ed3b9e18ed11.bindTooltip(
+                `<div>
+                     YPF Rio Segundo Ascendente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8aafcbf6e5ce26f6830708933f60b2d2 = L.circleMarker(
+                [-31.65, -63.66],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_b114fa5f3892db68dfca9987f03d12ef = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_396f285972537dba9d823904f1200943 = $(`<div id="html_396f285972537dba9d823904f1200943" style="width: 100.0%; height: 100.0%;"><b>YPF Rio Segundo Descendente</b><br>Region: Córdoba</div>`)[0];
+                popup_b114fa5f3892db68dfca9987f03d12ef.setContent(html_396f285972537dba9d823904f1200943);
+            
+        
+
+        circle_marker_8aafcbf6e5ce26f6830708933f60b2d2.bindPopup(popup_b114fa5f3892db68dfca9987f03d12ef)
+        ;
+
+        
+    
+    
+            circle_marker_8aafcbf6e5ce26f6830708933f60b2d2.bindTooltip(
+                `<div>
+                     YPF Rio Segundo Descendente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd1d4589f4818dba062ecb5b2a7cc506 = L.circleMarker(
+                [-31.38, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_32689d1e4e31432253d6d43947faa004 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e7a7654863b5b3b0ebf1ca28996211aa = $(`<div id="html_e7a7654863b5b3b0ebf1ca28996211aa" style="width: 100.0%; height: 100.0%;"><b>YPF Lucam Córdoba</b><br>Region: Córdoba</div>`)[0];
+                popup_32689d1e4e31432253d6d43947faa004.setContent(html_e7a7654863b5b3b0ebf1ca28996211aa);
+            
+        
+
+        circle_marker_dd1d4589f4818dba062ecb5b2a7cc506.bindPopup(popup_32689d1e4e31432253d6d43947faa004)
+        ;
+
+        
+    
+    
+            circle_marker_dd1d4589f4818dba062ecb5b2a7cc506.bindTooltip(
+                `<div>
+                     YPF Lucam Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f7f84549a10e370156971797a3e654c = L.circleMarker(
+                [-31.4, -64.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_5abf9d3ae6518df8073cd1011dfa3d85 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8e2f02f879eb4a86933ecb7250b748de = $(`<div id="html_8e2f02f879eb4a86933ecb7250b748de" style="width: 100.0%; height: 100.0%;"><b>YPF Vensim Córdoba</b><br>Region: Córdoba</div>`)[0];
+                popup_5abf9d3ae6518df8073cd1011dfa3d85.setContent(html_8e2f02f879eb4a86933ecb7250b748de);
+            
+        
+
+        circle_marker_1f7f84549a10e370156971797a3e654c.bindPopup(popup_5abf9d3ae6518df8073cd1011dfa3d85)
+        ;
+
+        
+    
+    
+            circle_marker_1f7f84549a10e370156971797a3e654c.bindTooltip(
+                `<div>
+                     YPF Vensim Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f58545ddb47005a720c9d14dbf4ad12d = L.circleMarker(
+                [-31.42, -64.22],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_05f48ca1e14eda21e3e33c5b09941d03 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9d2d4caa422d2c9099179e5b93b660e6 = $(`<div id="html_9d2d4caa422d2c9099179e5b93b660e6" style="width: 100.0%; height: 100.0%;"><b>YPF Punto Panorámico Córdoba</b><br>Region: Córdoba</div>`)[0];
+                popup_05f48ca1e14eda21e3e33c5b09941d03.setContent(html_9d2d4caa422d2c9099179e5b93b660e6);
+            
+        
+
+        circle_marker_f58545ddb47005a720c9d14dbf4ad12d.bindPopup(popup_05f48ca1e14eda21e3e33c5b09941d03)
+        ;
+
+        
+    
+    
+            circle_marker_f58545ddb47005a720c9d14dbf4ad12d.bindTooltip(
+                `<div>
+                     YPF Punto Panorámico Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8860de78bdcbd2d768df0ed87c843fa7 = L.circleMarker(
+                [-31.41, -64.19],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_43c1279ff448b2281b222cc2a1c37dd9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bc8cac9196d05d41091f67b6ba64e006 = $(`<div id="html_bc8cac9196d05d41091f67b6ba64e006" style="width: 100.0%; height: 100.0%;"><b>EPEC Córdoba</b><br>Region: Córdoba</div>`)[0];
+                popup_43c1279ff448b2281b222cc2a1c37dd9.setContent(html_bc8cac9196d05d41091f67b6ba64e006);
+            
+        
+
+        circle_marker_8860de78bdcbd2d768df0ed87c843fa7.bindPopup(popup_43c1279ff448b2281b222cc2a1c37dd9)
+        ;
+
+        
+    
+    
+            circle_marker_8860de78bdcbd2d768df0ed87c843fa7.bindTooltip(
+                `<div>
+                     EPEC Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e11ad846af6127ab9f2cf2892df8087 = L.circleMarker(
+                [-32.69, -62.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_8c541edb3e3362105c263cf9fd2b7e62 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fd0bd0e04d17d9e90624c7d1cd34c633 = $(`<div id="html_fd0bd0e04d17d9e90624c7d1cd34c633" style="width: 100.0%; height: 100.0%;"><b>EPEC Marcos Juárez</b><br>Region: Córdoba</div>`)[0];
+                popup_8c541edb3e3362105c263cf9fd2b7e62.setContent(html_fd0bd0e04d17d9e90624c7d1cd34c633);
+            
+        
+
+        circle_marker_5e11ad846af6127ab9f2cf2892df8087.bindPopup(popup_8c541edb3e3362105c263cf9fd2b7e62)
+        ;
+
+        
+    
+    
+            circle_marker_5e11ad846af6127ab9f2cf2892df8087.bindTooltip(
+                `<div>
+                     EPEC Marcos Juárez
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d04214e3a5927ae4e64e6768894843f = L.circleMarker(
+                [-32.41, -63.24],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_d49f752d0e644f6f1557f88efe59b107 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ea3a2ad483a283c8e957fd1953a60abf = $(`<div id="html_ea3a2ad483a283c8e957fd1953a60abf" style="width: 100.0%; height: 100.0%;"><b>Villa María EPEC</b><br>Region: Córdoba</div>`)[0];
+                popup_d49f752d0e644f6f1557f88efe59b107.setContent(html_ea3a2ad483a283c8e957fd1953a60abf);
+            
+        
+
+        circle_marker_5d04214e3a5927ae4e64e6768894843f.bindPopup(popup_d49f752d0e644f6f1557f88efe59b107)
+        ;
+
+        
+    
+    
+            circle_marker_5d04214e3a5927ae4e64e6768894843f.bindTooltip(
+                `<div>
+                     Villa María EPEC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe0abb1878471ce4ff1d0a91380c5894 = L.circleMarker(
+                [-31.42, -64.49],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_db87355cafb9f96763c904ed33f1b20c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6cb4ffea0679558eaefcdbccc007a459 = $(`<div id="html_6cb4ffea0679558eaefcdbccc007a459" style="width: 100.0%; height: 100.0%;"><b>Shopping Tierra Chica</b><br>Region: Córdoba</div>`)[0];
+                popup_db87355cafb9f96763c904ed33f1b20c.setContent(html_6cb4ffea0679558eaefcdbccc007a459);
+            
+        
+
+        circle_marker_fe0abb1878471ce4ff1d0a91380c5894.bindPopup(popup_db87355cafb9f96763c904ed33f1b20c)
+        ;
+
+        
+    
+    
+            circle_marker_fe0abb1878471ce4ff1d0a91380c5894.bindTooltip(
+                `<div>
+                     Shopping Tierra Chica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_765e78f2f57779539a4132e27c390bf0 = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_ec5793cdca3fb3860c00dcfa0330f6d1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1eddb2a86efbc930a9fea49d4ca8813b = $(`<div id="html_1eddb2a86efbc930a9fea49d4ca8813b" style="width: 100.0%; height: 100.0%;"><b>Equipel Córdoba</b><br>Region: Córdoba</div>`)[0];
+                popup_ec5793cdca3fb3860c00dcfa0330f6d1.setContent(html_1eddb2a86efbc930a9fea49d4ca8813b);
+            
+        
+
+        circle_marker_765e78f2f57779539a4132e27c390bf0.bindPopup(popup_ec5793cdca3fb3860c00dcfa0330f6d1)
+        ;
+
+        
+    
+    
+            circle_marker_765e78f2f57779539a4132e27c390bf0.bindTooltip(
+                `<div>
+                     Equipel Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7871349348e55790e8765a6347c6071b = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_f494d332c990a17258e358334f59fde3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0a02578c5720b0bb952cf77fe4ca100e = $(`<div id="html_0a02578c5720b0bb952cf77fe4ca100e" style="width: 100.0%; height: 100.0%;"><b>Sierra Electricidad</b><br>Region: Córdoba</div>`)[0];
+                popup_f494d332c990a17258e358334f59fde3.setContent(html_0a02578c5720b0bb952cf77fe4ca100e);
+            
+        
+
+        circle_marker_7871349348e55790e8765a6347c6071b.bindPopup(popup_f494d332c990a17258e358334f59fde3)
+        ;
+
+        
+    
+    
+            circle_marker_7871349348e55790e8765a6347c6071b.bindTooltip(
+                `<div>
+                     Sierra Electricidad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54d03872072a7af33c10d49a827f11f7 = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_c2feaaf14a240b858ca51740a2bc7996 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b1626686b9e527eebc5a0a62ed4643af = $(`<div id="html_b1626686b9e527eebc5a0a62ed4643af" style="width: 100.0%; height: 100.0%;"><b>City Center</b><br>Region: Córdoba</div>`)[0];
+                popup_c2feaaf14a240b858ca51740a2bc7996.setContent(html_b1626686b9e527eebc5a0a62ed4643af);
+            
+        
+
+        circle_marker_54d03872072a7af33c10d49a827f11f7.bindPopup(popup_c2feaaf14a240b858ca51740a2bc7996)
+        ;
+
+        
+    
+    
+            circle_marker_54d03872072a7af33c10d49a827f11f7.bindTooltip(
+                `<div>
+                     City Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7cd6607992d73120e338732e25f10231 = L.circleMarker(
+                [-32.74, -60.73],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_64d4d434a699098fe9b43813b7e5b220 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_33164a003dbf030955b31ef523f32cfb = $(`<div id="html_33164a003dbf030955b31ef523f32cfb" style="width: 100.0%; height: 100.0%;"><b>Shopping Plaza San Lorenzo</b><br>Region: Santa Fe</div>`)[0];
+                popup_64d4d434a699098fe9b43813b7e5b220.setContent(html_33164a003dbf030955b31ef523f32cfb);
+            
+        
+
+        circle_marker_7cd6607992d73120e338732e25f10231.bindPopup(popup_64d4d434a699098fe9b43813b7e5b220)
+        ;
+
+        
+    
+    
+            circle_marker_7cd6607992d73120e338732e25f10231.bindTooltip(
+                `<div>
+                     Shopping Plaza San Lorenzo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d99d0e9aa4b41c20c01799246bca76d6 = L.circleMarker(
+                [-32.89, -60.9],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_409e7a04efe821179045f360e3f809f4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c70894b56eae707a9134cfb51d4c4b2c = $(`<div id="html_c70894b56eae707a9134cfb51d4c4b2c" style="width: 100.0%; height: 100.0%;"><b>Parque Industrial Roldán</b><br>Region: Santa Fe</div>`)[0];
+                popup_409e7a04efe821179045f360e3f809f4.setContent(html_c70894b56eae707a9134cfb51d4c4b2c);
+            
+        
+
+        circle_marker_d99d0e9aa4b41c20c01799246bca76d6.bindPopup(popup_409e7a04efe821179045f360e3f809f4)
+        ;
+
+        
+    
+    
+            circle_marker_d99d0e9aa4b41c20c01799246bca76d6.bindTooltip(
+                `<div>
+                     Parque Industrial Roldán
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20f29d293d27d6c16bd64e2828e11f04 = L.circleMarker(
+                [-32.95, -60.65],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_1df4d296fc42690721bece808b9fd9e2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6393017e9f165c1a5372a6cc9f69db6b = $(`<div id="html_6393017e9f165c1a5372a6cc9f69db6b" style="width: 100.0%; height: 100.0%;"><b>Pastorutti</b><br>Region: Santa Fe</div>`)[0];
+                popup_1df4d296fc42690721bece808b9fd9e2.setContent(html_6393017e9f165c1a5372a6cc9f69db6b);
+            
+        
+
+        circle_marker_20f29d293d27d6c16bd64e2828e11f04.bindPopup(popup_1df4d296fc42690721bece808b9fd9e2)
+        ;
+
+        
+    
+    
+            circle_marker_20f29d293d27d6c16bd64e2828e11f04.bindTooltip(
+                `<div>
+                     Pastorutti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32af82faddd25f0cf0e7ec0bbf0736a1 = L.circleMarker(
+                [-32.94, -60.7],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_cb7780fe5502e79797e1a847fe87225f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_637e82d10ef7cb69d5f70e56896563f1 = $(`<div id="html_637e82d10ef7cb69d5f70e56896563f1" style="width: 100.0%; height: 100.0%;"><b>Greco</b><br>Region: Santa Fe</div>`)[0];
+                popup_cb7780fe5502e79797e1a847fe87225f.setContent(html_637e82d10ef7cb69d5f70e56896563f1);
+            
+        
+
+        circle_marker_32af82faddd25f0cf0e7ec0bbf0736a1.bindPopup(popup_cb7780fe5502e79797e1a847fe87225f)
+        ;
+
+        
+    
+    
+            circle_marker_32af82faddd25f0cf0e7ec0bbf0736a1.bindTooltip(
+                `<div>
+                     Greco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2286ab1cb38431856caf2343877317b = L.circleMarker(
+                [-32.95, -60.64],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_5e9e3bdbe9b7c674011dbfa6a03b7d49 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_457b113fefac41fbc72cbc6f1bbd37c0 = $(`<div id="html_457b113fefac41fbc72cbc6f1bbd37c0" style="width: 100.0%; height: 100.0%;"><b>Serra Electricidad Rosario</b><br>Region: Santa Fe</div>`)[0];
+                popup_5e9e3bdbe9b7c674011dbfa6a03b7d49.setContent(html_457b113fefac41fbc72cbc6f1bbd37c0);
+            
+        
+
+        circle_marker_a2286ab1cb38431856caf2343877317b.bindPopup(popup_5e9e3bdbe9b7c674011dbfa6a03b7d49)
+        ;
+
+        
+    
+    
+            circle_marker_a2286ab1cb38431856caf2343877317b.bindTooltip(
+                `<div>
+                     Serra Electricidad Rosario
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_264f7c4df756277293cd0524cc94b6e6 = L.circleMarker(
+                [-31.63, -60.7],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_8f2fa4e0f818e5fc7dcf71992c063886 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3f7b254859f58953ae447b989745337a = $(`<div id="html_3f7b254859f58953ae447b989745337a" style="width: 100.0%; height: 100.0%;"><b>Contelec</b><br>Region: Santa Fe</div>`)[0];
+                popup_8f2fa4e0f818e5fc7dcf71992c063886.setContent(html_3f7b254859f58953ae447b989745337a);
+            
+        
+
+        circle_marker_264f7c4df756277293cd0524cc94b6e6.bindPopup(popup_8f2fa4e0f818e5fc7dcf71992c063886)
+        ;
+
+        
+    
+    
+            circle_marker_264f7c4df756277293cd0524cc94b6e6.bindTooltip(
+                `<div>
+                     Contelec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b8492c1565e75a6328227a100a73a5e = L.circleMarker(
+                [-31.73, -60.53],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_661ad1345ee8b429e9d70c65f28c260d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ace3edbf69206047bf6cddcffb1200cf = $(`<div id="html_ace3edbf69206047bf6cddcffb1200cf" style="width: 100.0%; height: 100.0%;"><b>Dygelec</b><br>Region: Santa Fe</div>`)[0];
+                popup_661ad1345ee8b429e9d70c65f28c260d.setContent(html_ace3edbf69206047bf6cddcffb1200cf);
+            
+        
+
+        circle_marker_8b8492c1565e75a6328227a100a73a5e.bindPopup(popup_661ad1345ee8b429e9d70c65f28c260d)
+        ;
+
+        
+    
+    
+            circle_marker_8b8492c1565e75a6328227a100a73a5e.bindTooltip(
+                `<div>
+                     Dygelec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30d928d5e89bb2bf96129432cda19d50 = L.circleMarker(
+                [-31.63, -60.7],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_1faaba2ade50eb2db561bf425e57e345 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b8d34233488876d4b69b381e8c793f27 = $(`<div id="html_b8d34233488876d4b69b381e8c793f27" style="width: 100.0%; height: 100.0%;"><b>Serra Electricidad SF</b><br>Region: Santa Fe</div>`)[0];
+                popup_1faaba2ade50eb2db561bf425e57e345.setContent(html_b8d34233488876d4b69b381e8c793f27);
+            
+        
+
+        circle_marker_30d928d5e89bb2bf96129432cda19d50.bindPopup(popup_1faaba2ade50eb2db561bf425e57e345)
+        ;
+
+        
+    
+    
+            circle_marker_30d928d5e89bb2bf96129432cda19d50.bindTooltip(
+                `<div>
+                     Serra Electricidad SF
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33c7a12f306cd4f462638f629da7fa91 = L.circleMarker(
+                [-33.73, -61.96],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_ec80d3437b032f593dd615f1313b5ed6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_33632fccecf1a064aedd4bec0a216a93 = $(`<div id="html_33632fccecf1a064aedd4bec0a216a93" style="width: 100.0%; height: 100.0%;"><b>Serra Electricidad Pergamino</b><br>Region: Santa Fe</div>`)[0];
+                popup_ec80d3437b032f593dd615f1313b5ed6.setContent(html_33632fccecf1a064aedd4bec0a216a93);
+            
+        
+
+        circle_marker_33c7a12f306cd4f462638f629da7fa91.bindPopup(popup_ec80d3437b032f593dd615f1313b5ed6)
+        ;
+
+        
+    
+    
+            circle_marker_33c7a12f306cd4f462638f629da7fa91.bindTooltip(
+                `<div>
+                     Serra Electricidad Pergamino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e318a83f35be0294f9ba5c3f5a72c9a7 = L.circleMarker(
+                [-33.89, -60.57],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_da7bfa91bc1648ed73ad38d838e2d7cb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dee145767c13e6af4d6973f663e77c5f = $(`<div id="html_dee145767c13e6af4d6973f663e77c5f" style="width: 100.0%; height: 100.0%;"><b>Transelec Pergamino</b><br>Region: Santa Fe</div>`)[0];
+                popup_da7bfa91bc1648ed73ad38d838e2d7cb.setContent(html_dee145767c13e6af4d6973f663e77c5f);
+            
+        
+
+        circle_marker_e318a83f35be0294f9ba5c3f5a72c9a7.bindPopup(popup_da7bfa91bc1648ed73ad38d838e2d7cb)
+        ;
+
+        
+    
+    
+            circle_marker_e318a83f35be0294f9ba5c3f5a72c9a7.bindTooltip(
+                `<div>
+                     Transelec Pergamino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df1b9a0584522c2b722f943eda2eb24c = L.circleMarker(
+                [-34.61, -58.36],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_d78186af3408b6cbf30771d12eb411f0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_68caa2c3f08b54d30d14277962810fe1 = $(`<div id="html_68caa2c3f08b54d30d14277962810fe1" style="width: 100.0%; height: 100.0%;"><b>Madero Harbour</b><br>Region: CABA</div>`)[0];
+                popup_d78186af3408b6cbf30771d12eb411f0.setContent(html_68caa2c3f08b54d30d14277962810fe1);
+            
+        
+
+        circle_marker_df1b9a0584522c2b722f943eda2eb24c.bindPopup(popup_d78186af3408b6cbf30771d12eb411f0)
+        ;
+
+        
+    
+    
+            circle_marker_df1b9a0584522c2b722f943eda2eb24c.bindTooltip(
+                `<div>
+                     Madero Harbour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27f897f7a58f6f0b54a4c99baaf575ad = L.circleMarker(
+                [-34.6, -58.38],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_13d37f24d184ce814dda2af892ae5979 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a781943eaf140d8007160237016154c8 = $(`<div id="html_a781943eaf140d8007160237016154c8" style="width: 100.0%; height: 100.0%;"><b>Paseo La Plaza</b><br>Region: CABA</div>`)[0];
+                popup_13d37f24d184ce814dda2af892ae5979.setContent(html_a781943eaf140d8007160237016154c8);
+            
+        
+
+        circle_marker_27f897f7a58f6f0b54a4c99baaf575ad.bindPopup(popup_13d37f24d184ce814dda2af892ae5979)
+        ;
+
+        
+    
+    
+            circle_marker_27f897f7a58f6f0b54a4c99baaf575ad.bindTooltip(
+                `<div>
+                     Paseo La Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_567b4c0eec091bbe993420ccbc4e1786 = L.circleMarker(
+                [-34.62, -58.42],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_dc27b9835eac42c6150e6de9eb7abcf5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e7315654449285b5c3afbcf9fa784fea = $(`<div id="html_e7315654449285b5c3afbcf9fa784fea" style="width: 100.0%; height: 100.0%;"><b>Park 10</b><br>Region: CABA</div>`)[0];
+                popup_dc27b9835eac42c6150e6de9eb7abcf5.setContent(html_e7315654449285b5c3afbcf9fa784fea);
+            
+        
+
+        circle_marker_567b4c0eec091bbe993420ccbc4e1786.bindPopup(popup_dc27b9835eac42c6150e6de9eb7abcf5)
+        ;
+
+        
+    
+    
+            circle_marker_567b4c0eec091bbe993420ccbc4e1786.bindTooltip(
+                `<div>
+                     Park 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf9b5784a8c96a0b5838c6605ce2e74c = L.circleMarker(
+                [-34.61, -58.43],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_e0d6a57046ee494379e386f41a492d77 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b2e322a486e62efd3077bb0e9e02800d = $(`<div id="html_b2e322a486e62efd3077bb0e9e02800d" style="width: 100.0%; height: 100.0%;"><b>Nissan Neostar</b><br>Region: CABA</div>`)[0];
+                popup_e0d6a57046ee494379e386f41a492d77.setContent(html_b2e322a486e62efd3077bb0e9e02800d);
+            
+        
+
+        circle_marker_bf9b5784a8c96a0b5838c6605ce2e74c.bindPopup(popup_e0d6a57046ee494379e386f41a492d77)
+        ;
+
+        
+    
+    
+            circle_marker_bf9b5784a8c96a0b5838c6605ce2e74c.bindTooltip(
+                `<div>
+                     Nissan Neostar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0adc7d2a8cdba240ce63b511406a4708 = L.circleMarker(
+                [-34.61, -58.43],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_c2c3b5fa85b324cec1b817c6c4b0b205 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f37c32f4c21aead124f28cda09dd1cd8 = $(`<div id="html_f37c32f4c21aead124f28cda09dd1cd8" style="width: 100.0%; height: 100.0%;"><b>Punto 54</b><br>Region: CABA</div>`)[0];
+                popup_c2c3b5fa85b324cec1b817c6c4b0b205.setContent(html_f37c32f4c21aead124f28cda09dd1cd8);
+            
+        
+
+        circle_marker_0adc7d2a8cdba240ce63b511406a4708.bindPopup(popup_c2c3b5fa85b324cec1b817c6c4b0b205)
+        ;
+
+        
+    
+    
+            circle_marker_0adc7d2a8cdba240ce63b511406a4708.bindTooltip(
+                `<div>
+                     Punto 54
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e47be631bf5abbb48101a7114f4a3ebb = L.circleMarker(
+                [-34.61, -58.36],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_eb405b71929d13a98f0f6490e08b7c94 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_beb57adacb049ebd40ef2ca806301764 = $(`<div id="html_beb57adacb049ebd40ef2ca806301764" style="width: 100.0%; height: 100.0%;"><b>Vanluz</b><br>Region: CABA</div>`)[0];
+                popup_eb405b71929d13a98f0f6490e08b7c94.setContent(html_beb57adacb049ebd40ef2ca806301764);
+            
+        
+
+        circle_marker_e47be631bf5abbb48101a7114f4a3ebb.bindPopup(popup_eb405b71929d13a98f0f6490e08b7c94)
+        ;
+
+        
+    
+    
+            circle_marker_e47be631bf5abbb48101a7114f4a3ebb.bindTooltip(
+                `<div>
+                     Vanluz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08deca7cd3d9e9212f21b34dcc9588f1 = L.circleMarker(
+                [-34.61, -58.36],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_3432cc08680cc85f736eb43f30103929 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9cf5ebf4eeb6c4fe4b887d222c12ec44 = $(`<div id="html_9cf5ebf4eeb6c4fe4b887d222c12ec44" style="width: 100.0%; height: 100.0%;"><b>BP Soluciones Eléctricas</b><br>Region: CABA</div>`)[0];
+                popup_3432cc08680cc85f736eb43f30103929.setContent(html_9cf5ebf4eeb6c4fe4b887d222c12ec44);
+            
+        
+
+        circle_marker_08deca7cd3d9e9212f21b34dcc9588f1.bindPopup(popup_3432cc08680cc85f736eb43f30103929)
+        ;
+
+        
+    
+    
+            circle_marker_08deca7cd3d9e9212f21b34dcc9588f1.bindTooltip(
+                `<div>
+                     BP Soluciones Eléctricas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6643434662b4704a623ba5bdb1f864aa = L.circleMarker(
+                [-34.85, -58.35],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_6a3a18406fb4a00b77a841c97ec281cb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d3107ba71488d821a243945a4e89a240 = $(`<div id="html_d3107ba71488d821a243945a4e89a240" style="width: 100.0%; height: 100.0%;"><b>Electropuerto</b><br>Region: CABA</div>`)[0];
+                popup_6a3a18406fb4a00b77a841c97ec281cb.setContent(html_d3107ba71488d821a243945a4e89a240);
+            
+        
+
+        circle_marker_6643434662b4704a623ba5bdb1f864aa.bindPopup(popup_6a3a18406fb4a00b77a841c97ec281cb)
+        ;
+
+        
+    
+    
+            circle_marker_6643434662b4704a623ba5bdb1f864aa.bindTooltip(
+                `<div>
+                     Electropuerto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9224f07593662c229ac22846f17db12f = L.circleMarker(
+                [-34.56, -58.68],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_19e837ab1bb1bbba5cc0747c7a2e7f77 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7b68b3e0fdb6f348c0273d9b95822481 = $(`<div id="html_7b68b3e0fdb6f348c0273d9b95822481" style="width: 100.0%; height: 100.0%;"><b>Camino de los Remeros</b><br>Region: GBA Norte</div>`)[0];
+                popup_19e837ab1bb1bbba5cc0747c7a2e7f77.setContent(html_7b68b3e0fdb6f348c0273d9b95822481);
+            
+        
+
+        circle_marker_9224f07593662c229ac22846f17db12f.bindPopup(popup_19e837ab1bb1bbba5cc0747c7a2e7f77)
+        ;
+
+        
+    
+    
+            circle_marker_9224f07593662c229ac22846f17db12f.bindTooltip(
+                `<div>
+                     Camino de los Remeros
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2e341b451117f020a900121652819fe = L.circleMarker(
+                [-34.56, -58.68],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_117fc1f5585b6c78bfb464d27e6c6cae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_27261b0bb19680744eafcb690866cd1d = $(`<div id="html_27261b0bb19680744eafcb690866cd1d" style="width: 100.0%; height: 100.0%;"><b>Tifón Water Planet</b><br>Region: GBA Norte</div>`)[0];
+                popup_117fc1f5585b6c78bfb464d27e6c6cae.setContent(html_27261b0bb19680744eafcb690866cd1d);
+            
+        
+
+        circle_marker_c2e341b451117f020a900121652819fe.bindPopup(popup_117fc1f5585b6c78bfb464d27e6c6cae)
+        ;
+
+        
+    
+    
+            circle_marker_c2e341b451117f020a900121652819fe.bindTooltip(
+                `<div>
+                     Tifón Water Planet
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a53445e87f7dbf86e08254752c73e95 = L.circleMarker(
+                [-34.52, -58.72],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_4e4e709e9c14b6dacb0d9a08c95636ee = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_395fc5f35a7bd3b49fe22f81ad11f23b = $(`<div id="html_395fc5f35a7bd3b49fe22f81ad11f23b" style="width: 100.0%; height: 100.0%;"><b>Andreani Norlog</b><br>Region: GBA Norte</div>`)[0];
+                popup_4e4e709e9c14b6dacb0d9a08c95636ee.setContent(html_395fc5f35a7bd3b49fe22f81ad11f23b);
+            
+        
+
+        circle_marker_9a53445e87f7dbf86e08254752c73e95.bindPopup(popup_4e4e709e9c14b6dacb0d9a08c95636ee)
+        ;
+
+        
+    
+    
+            circle_marker_9a53445e87f7dbf86e08254752c73e95.bindTooltip(
+                `<div>
+                     Andreani Norlog
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_282ccc764a752db9c2d1f301e3f42b07 = L.circleMarker(
+                [-34.52, -58.5],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_6a90413fcdb131f4590f583cb3b3a089 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_96362ba47da531b2671c48bfa9cb16b6 = $(`<div id="html_96362ba47da531b2671c48bfa9cb16b6" style="width: 100.0%; height: 100.0%;"><b>Tamex 2</b><br>Region: GBA Norte</div>`)[0];
+                popup_6a90413fcdb131f4590f583cb3b3a089.setContent(html_96362ba47da531b2671c48bfa9cb16b6);
+            
+        
+
+        circle_marker_282ccc764a752db9c2d1f301e3f42b07.bindPopup(popup_6a90413fcdb131f4590f583cb3b3a089)
+        ;
+
+        
+    
+    
+            circle_marker_282ccc764a752db9c2d1f301e3f42b07.bindTooltip(
+                `<div>
+                     Tamex 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e6d80fb3d8e401fdc841e0cdae1e8bf = L.circleMarker(
+                [-34.47, -58.52],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_87cd0a70756702ac4492bfac50864ea2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9dc793e9880ddcc307410ea60f47dc7f = $(`<div id="html_9dc793e9880ddcc307410ea60f47dc7f" style="width: 100.0%; height: 100.0%;"><b>Harmonie Chateau</b><br>Region: GBA Norte</div>`)[0];
+                popup_87cd0a70756702ac4492bfac50864ea2.setContent(html_9dc793e9880ddcc307410ea60f47dc7f);
+            
+        
+
+        circle_marker_2e6d80fb3d8e401fdc841e0cdae1e8bf.bindPopup(popup_87cd0a70756702ac4492bfac50864ea2)
+        ;
+
+        
+    
+    
+            circle_marker_2e6d80fb3d8e401fdc841e0cdae1e8bf.bindTooltip(
+                `<div>
+                     Harmonie Chateau
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc9d878e3eb557ad912c9954aed67a81 = L.circleMarker(
+                [-34.47, -58.52],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_c6f3384976d92efff7ca379f6c9a528e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a09b51753c0afb5248d6680d586bbf05 = $(`<div id="html_a09b51753c0afb5248d6680d586bbf05" style="width: 100.0%; height: 100.0%;"><b>Centro Logístico ALKO</b><br>Region: GBA Norte</div>`)[0];
+                popup_c6f3384976d92efff7ca379f6c9a528e.setContent(html_a09b51753c0afb5248d6680d586bbf05);
+            
+        
+
+        circle_marker_cc9d878e3eb557ad912c9954aed67a81.bindPopup(popup_c6f3384976d92efff7ca379f6c9a528e)
+        ;
+
+        
+    
+    
+            circle_marker_cc9d878e3eb557ad912c9954aed67a81.bindTooltip(
+                `<div>
+                     Centro Logístico ALKO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_765a686e8e6dd4c18355de9705ab1d8d = L.circleMarker(
+                [-34.47, -58.53],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_b32c831385ba02824cc5e470febe1f28 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e64fbbe569a5a75a6027042e0d9c7436 = $(`<div id="html_e64fbbe569a5a75a6027042e0d9c7436" style="width: 100.0%; height: 100.0%;"><b>Oficinas ALKO</b><br>Region: GBA Norte</div>`)[0];
+                popup_b32c831385ba02824cc5e470febe1f28.setContent(html_e64fbbe569a5a75a6027042e0d9c7436);
+            
+        
+
+        circle_marker_765a686e8e6dd4c18355de9705ab1d8d.bindPopup(popup_b32c831385ba02824cc5e470febe1f28)
+        ;
+
+        
+    
+    
+            circle_marker_765a686e8e6dd4c18355de9705ab1d8d.bindTooltip(
+                `<div>
+                     Oficinas ALKO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe293cf245d8405ba6632730acd86788 = L.circleMarker(
+                [-34.35, -58.79],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_0412396fe21508a2cc1d793358fc8f78 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a251368412219b4966f958dedb96d9fb = $(`<div id="html_a251368412219b4966f958dedb96d9fb" style="width: 100.0%; height: 100.0%;"><b>Pelba Escobar</b><br>Region: GBA Norte</div>`)[0];
+                popup_0412396fe21508a2cc1d793358fc8f78.setContent(html_a251368412219b4966f958dedb96d9fb);
+            
+        
+
+        circle_marker_fe293cf245d8405ba6632730acd86788.bindPopup(popup_0412396fe21508a2cc1d793358fc8f78)
+        ;
+
+        
+    
+    
+            circle_marker_fe293cf245d8405ba6632730acd86788.bindTooltip(
+                `<div>
+                     Pelba Escobar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99b640e2eadb6e361a6e410736dd4409 = L.circleMarker(
+                [-34.57, -59.11],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_fbc8dddb58bdbd0996e8929fec4fa4e2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_194728b13f326a72a2ac714a168c589e = $(`<div id="html_194728b13f326a72a2ac714a168c589e" style="width: 100.0%; height: 100.0%;"><b>Electro Luján</b><br>Region: GBA Oeste</div>`)[0];
+                popup_fbc8dddb58bdbd0996e8929fec4fa4e2.setContent(html_194728b13f326a72a2ac714a168c589e);
+            
+        
+
+        circle_marker_99b640e2eadb6e361a6e410736dd4409.bindPopup(popup_fbc8dddb58bdbd0996e8929fec4fa4e2)
+        ;
+
+        
+    
+    
+            circle_marker_99b640e2eadb6e361a6e410736dd4409.bindTooltip(
+                `<div>
+                     Electro Luján
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25102e01cedab63df259caf60dc75fe7 = L.circleMarker(
+                [-34.46, -58.91],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_018094038e83f88d0986fe53c59aa490 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_130dca55b3435d910d77661806c67086 = $(`<div id="html_130dca55b3435d910d77661806c67086" style="width: 100.0%; height: 100.0%;"><b>Pelba Pilar</b><br>Region: GBA Oeste</div>`)[0];
+                popup_018094038e83f88d0986fe53c59aa490.setContent(html_130dca55b3435d910d77661806c67086);
+            
+        
+
+        circle_marker_25102e01cedab63df259caf60dc75fe7.bindPopup(popup_018094038e83f88d0986fe53c59aa490)
+        ;
+
+        
+    
+    
+            circle_marker_25102e01cedab63df259caf60dc75fe7.bindTooltip(
+                `<div>
+                     Pelba Pilar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aab2d53381fe8bf446ed5dc97fd7d6b6 = L.circleMarker(
+                [-34.76, -58.4],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_529b93f52aa581b59668a080500064f9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9ecf033a3de252c085088041a0000452 = $(`<div id="html_9ecf033a3de252c085088041a0000452" style="width: 100.0%; height: 100.0%;"><b>Electricidad Solari</b><br>Region: GBA Sur</div>`)[0];
+                popup_529b93f52aa581b59668a080500064f9.setContent(html_9ecf033a3de252c085088041a0000452);
+            
+        
+
+        circle_marker_aab2d53381fe8bf446ed5dc97fd7d6b6.bindPopup(popup_529b93f52aa581b59668a080500064f9)
+        ;
+
+        
+    
+    
+            circle_marker_aab2d53381fe8bf446ed5dc97fd7d6b6.bindTooltip(
+                `<div>
+                     Electricidad Solari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98042ab263cb0b33b8fcb5563efa146b = L.circleMarker(
+                [-34.92, -57.95],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_61ddbb732bc5d00c897e8024b9f9bf96 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d180520f00f4c309a9cf01f30e4f5929 = $(`<div id="html_d180520f00f4c309a9cf01f30e4f5929" style="width: 100.0%; height: 100.0%;"><b>Magnani Soluciones</b><br>Region: GBA Sur</div>`)[0];
+                popup_61ddbb732bc5d00c897e8024b9f9bf96.setContent(html_d180520f00f4c309a9cf01f30e4f5929);
+            
+        
+
+        circle_marker_98042ab263cb0b33b8fcb5563efa146b.bindPopup(popup_61ddbb732bc5d00c897e8024b9f9bf96)
+        ;
+
+        
+    
+    
+            circle_marker_98042ab263cb0b33b8fcb5563efa146b.bindTooltip(
+                `<div>
+                     Magnani Soluciones
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab1b8d964474bfb026521c1fffc6f67e = L.circleMarker(
+                [-34.87, -58.5],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_4385fd283b60cebb384606e98fc622c1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e693d7e4673a34eddec3edad5b7c6295 = $(`<div id="html_e693d7e4673a34eddec3edad5b7c6295" style="width: 100.0%; height: 100.0%;"><b>Fegime Latam</b><br>Region: GBA Sur</div>`)[0];
+                popup_4385fd283b60cebb384606e98fc622c1.setContent(html_e693d7e4673a34eddec3edad5b7c6295);
+            
+        
+
+        circle_marker_ab1b8d964474bfb026521c1fffc6f67e.bindPopup(popup_4385fd283b60cebb384606e98fc622c1)
+        ;
+
+        
+    
+    
+            circle_marker_ab1b8d964474bfb026521c1fffc6f67e.bindTooltip(
+                `<div>
+                     Fegime Latam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a27a47d42ca2a1b159b17cdbe617fcf = L.circleMarker(
+                [-34.85, -58.52],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_d76cc1f098c4bdd6e87395822b06374a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f4beae8d748484c9b987cee2d2c42d70 = $(`<div id="html_f4beae8d748484c9b987cee2d2c42d70" style="width: 100.0%; height: 100.0%;"><b>Trielec</b><br>Region: GBA Sur</div>`)[0];
+                popup_d76cc1f098c4bdd6e87395822b06374a.setContent(html_f4beae8d748484c9b987cee2d2c42d70);
+            
+        
+
+        circle_marker_9a27a47d42ca2a1b159b17cdbe617fcf.bindPopup(popup_d76cc1f098c4bdd6e87395822b06374a)
+        ;
+
+        
+    
+    
+            circle_marker_9a27a47d42ca2a1b159b17cdbe617fcf.bindTooltip(
+                `<div>
+                     Trielec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3edca8185089891516599abd9727baf = L.circleMarker(
+                [-34.92, -57.95],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_54723ccc436edcbb148af4821d0fa1e2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ae0a2c2a62d3472140b4ec474312e5ba = $(`<div id="html_ae0a2c2a62d3472140b4ec474312e5ba" style="width: 100.0%; height: 100.0%;"><b>JOMA Electricidad</b><br>Region: GBA Sur</div>`)[0];
+                popup_54723ccc436edcbb148af4821d0fa1e2.setContent(html_ae0a2c2a62d3472140b4ec474312e5ba);
+            
+        
+
+        circle_marker_d3edca8185089891516599abd9727baf.bindPopup(popup_54723ccc436edcbb148af4821d0fa1e2)
+        ;
+
+        
+    
+    
+            circle_marker_d3edca8185089891516599abd9727baf.bindTooltip(
+                `<div>
+                     JOMA Electricidad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_869c3ce7741f83828b93aac14cf76a83 = L.circleMarker(
+                [-34.85, -58.52],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_0926f4282eb4cf884722bcd5e8f6a256 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5a8be3b3cfae43964d42b9164fc55f2d = $(`<div id="html_5a8be3b3cfae43964d42b9164fc55f2d" style="width: 100.0%; height: 100.0%;"><b>Richetta Schneider</b><br>Region: GBA Sur</div>`)[0];
+                popup_0926f4282eb4cf884722bcd5e8f6a256.setContent(html_5a8be3b3cfae43964d42b9164fc55f2d);
+            
+        
+
+        circle_marker_869c3ce7741f83828b93aac14cf76a83.bindPopup(popup_0926f4282eb4cf884722bcd5e8f6a256)
+        ;
+
+        
+    
+    
+            circle_marker_869c3ce7741f83828b93aac14cf76a83.bindTooltip(
+                `<div>
+                     Richetta Schneider
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a3139d1a44c75be8bb6259bc5a67623 = L.circleMarker(
+                [-34.65, -58.62],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_66e63f2136782809cbb129798e173197 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c0ff69c92af1c28602ed8a9ea00da19f = $(`<div id="html_c0ff69c92af1c28602ed8a9ea00da19f" style="width: 100.0%; height: 100.0%;"><b>Pem</b><br>Region: GBA Sur</div>`)[0];
+                popup_66e63f2136782809cbb129798e173197.setContent(html_c0ff69c92af1c28602ed8a9ea00da19f);
+            
+        
+
+        circle_marker_1a3139d1a44c75be8bb6259bc5a67623.bindPopup(popup_66e63f2136782809cbb129798e173197)
+        ;
+
+        
+    
+    
+            circle_marker_1a3139d1a44c75be8bb6259bc5a67623.bindTooltip(
+                `<div>
+                     Pem
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22627d311d8b660153764b55a389354c = L.circleMarker(
+                [-34.66, -58.6],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_41d55be7f2962041f0efa28b85722160 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4ad2319cc4fd782905979940cde764c5 = $(`<div id="html_4ad2319cc4fd782905979940cde764c5" style="width: 100.0%; height: 100.0%;"><b>Nuevo Sur</b><br>Region: GBA Sur</div>`)[0];
+                popup_41d55be7f2962041f0efa28b85722160.setContent(html_4ad2319cc4fd782905979940cde764c5);
+            
+        
+
+        circle_marker_22627d311d8b660153764b55a389354c.bindPopup(popup_41d55be7f2962041f0efa28b85722160)
+        ;
+
+        
+    
+    
+            circle_marker_22627d311d8b660153764b55a389354c.bindTooltip(
+                `<div>
+                     Nuevo Sur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f8845166e7d7ab7ece204d4abc1768e = L.circleMarker(
+                [-34.66, -58.6],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_8207d5d16082521651546da95197c878 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9be8352fc7cca76c74fca7bf380999bc = $(`<div id="html_9be8352fc7cca76c74fca7bf380999bc" style="width: 100.0%; height: 100.0%;"><b>Ciardi Hnos Main</b><br>Region: GBA Sur</div>`)[0];
+                popup_8207d5d16082521651546da95197c878.setContent(html_9be8352fc7cca76c74fca7bf380999bc);
+            
+        
+
+        circle_marker_1f8845166e7d7ab7ece204d4abc1768e.bindPopup(popup_8207d5d16082521651546da95197c878)
+        ;
+
+        
+    
+    
+            circle_marker_1f8845166e7d7ab7ece204d4abc1768e.bindTooltip(
+                `<div>
+                     Ciardi Hnos Main
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d19782cf6e797f99cb2bf77ac3d1016f = L.circleMarker(
+                [-36.31, -57.68],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_5ba640368345a97d0c52dd77c469c151 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e08116aec4a6ad8f27a36b1ef7f2cfca = $(`<div id="html_e08116aec4a6ad8f27a36b1ef7f2cfca" style="width: 100.0%; height: 100.0%;"><b>YPF Dolores</b><br>Region: Buenos Aires</div>`)[0];
+                popup_5ba640368345a97d0c52dd77c469c151.setContent(html_e08116aec4a6ad8f27a36b1ef7f2cfca);
+            
+        
+
+        circle_marker_d19782cf6e797f99cb2bf77ac3d1016f.bindPopup(popup_5ba640368345a97d0c52dd77c469c151)
+        ;
+
+        
+    
+    
+            circle_marker_d19782cf6e797f99cb2bf77ac3d1016f.bindTooltip(
+                `<div>
+                     YPF Dolores
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_961f7ef344811b0e99e132356b772f4c = L.circleMarker(
+                [-37.84, -58.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_3e1db12075feeeebcf3119b13395a1b2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a8a9fbfd3bb8fae6c4f571d317ffbf8e = $(`<div id="html_a8a9fbfd3bb8fae6c4f571d317ffbf8e" style="width: 100.0%; height: 100.0%;"><b>Ciardi Hnos Balcarce</b><br>Region: Buenos Aires</div>`)[0];
+                popup_3e1db12075feeeebcf3119b13395a1b2.setContent(html_a8a9fbfd3bb8fae6c4f571d317ffbf8e);
+            
+        
+
+        circle_marker_961f7ef344811b0e99e132356b772f4c.bindPopup(popup_3e1db12075feeeebcf3119b13395a1b2)
+        ;
+
+        
+    
+    
+            circle_marker_961f7ef344811b0e99e132356b772f4c.bindTooltip(
+                `<div>
+                     Ciardi Hnos Balcarce
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ef89b16f44117ecc8a5cf2612d913de5 = L.circleMarker(
+                [-37.11, -56.86],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_97a795377ea86b99f5859f7707c701ab = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bdf41c22238139d8d3f4ba6c664abc19 = $(`<div id="html_bdf41c22238139d8d3f4ba6c664abc19" style="width: 100.0%; height: 100.0%;"><b>Ciardi Hnos La Costa</b><br>Region: Buenos Aires</div>`)[0];
+                popup_97a795377ea86b99f5859f7707c701ab.setContent(html_bdf41c22238139d8d3f4ba6c664abc19);
+            
+        
+
+        circle_marker_ef89b16f44117ecc8a5cf2612d913de5.bindPopup(popup_97a795377ea86b99f5859f7707c701ab)
+        ;
+
+        
+    
+    
+            circle_marker_ef89b16f44117ecc8a5cf2612d913de5.bindTooltip(
+                `<div>
+                     Ciardi Hnos La Costa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1825113a5ab47a1436daa0f2db7d2631 = L.circleMarker(
+                [-36.88, -60.02],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_2bb315ee291b55487482e39b1971701a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_41eafbd2d834362f518d72518360b328 = $(`<div id="html_41eafbd2d834362f518d72518360b328" style="width: 100.0%; height: 100.0%;"><b>Electricidad Alsina</b><br>Region: Buenos Aires</div>`)[0];
+                popup_2bb315ee291b55487482e39b1971701a.setContent(html_41eafbd2d834362f518d72518360b328);
+            
+        
+
+        circle_marker_1825113a5ab47a1436daa0f2db7d2631.bindPopup(popup_2bb315ee291b55487482e39b1971701a)
+        ;
+
+        
+    
+    
+            circle_marker_1825113a5ab47a1436daa0f2db7d2631.bindTooltip(
+                `<div>
+                     Electricidad Alsina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_432b0160d8f02975726213dbb5faf8ad = L.circleMarker(
+                [-38.72, -62.27],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_49fe78b9d40127de4cb27265244db2f4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9d2081a22a249307c05379626b660b03 = $(`<div id="html_9d2081a22a249307c05379626b660b03" style="width: 100.0%; height: 100.0%;"><b>Electricidad Maza</b><br>Region: Buenos Aires</div>`)[0];
+                popup_49fe78b9d40127de4cb27265244db2f4.setContent(html_9d2081a22a249307c05379626b660b03);
+            
+        
+
+        circle_marker_432b0160d8f02975726213dbb5faf8ad.bindPopup(popup_49fe78b9d40127de4cb27265244db2f4)
+        ;
+
+        
+    
+    
+            circle_marker_432b0160d8f02975726213dbb5faf8ad.bindTooltip(
+                `<div>
+                     Electricidad Maza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78a559f8e905ce6e545146e59c612b48 = L.circleMarker(
+                [-38.72, -62.28],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_d59f9930defabdc21eb7b33851c29584 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_de11d37fcdd3e9fa1954b5fc04882c21 = $(`<div id="html_de11d37fcdd3e9fa1954b5fc04882c21" style="width: 100.0%; height: 100.0%;"><b>Melecsur</b><br>Region: Buenos Aires</div>`)[0];
+                popup_d59f9930defabdc21eb7b33851c29584.setContent(html_de11d37fcdd3e9fa1954b5fc04882c21);
+            
+        
+
+        circle_marker_78a559f8e905ce6e545146e59c612b48.bindPopup(popup_d59f9930defabdc21eb7b33851c29584)
+        ;
+
+        
+    
+    
+            circle_marker_78a559f8e905ce6e545146e59c612b48.bindTooltip(
+                `<div>
+                     Melecsur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8fcd070ad485ba20a4fb93bce768ea1c = L.circleMarker(
+                [-37.32, -59.13],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_0be00de4f38d59a49d9346bd5bacc429 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e688840bfe1535b1ece42e217daa545f = $(`<div id="html_e688840bfe1535b1ece42e217daa545f" style="width: 100.0%; height: 100.0%;"><b>Tandil</b><br>Region: Buenos Aires</div>`)[0];
+                popup_0be00de4f38d59a49d9346bd5bacc429.setContent(html_e688840bfe1535b1ece42e217daa545f);
+            
+        
+
+        circle_marker_8fcd070ad485ba20a4fb93bce768ea1c.bindPopup(popup_0be00de4f38d59a49d9346bd5bacc429)
+        ;
+
+        
+    
+    
+            circle_marker_8fcd070ad485ba20a4fb93bce768ea1c.bindTooltip(
+                `<div>
+                     Tandil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2c2554d65036760f877037699355687 = L.circleMarker(
+                [-38.0, -57.55],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_65d5357e78ef0ad7edff23d66d074bc1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2b69088042db16908762551c1a6958ac = $(`<div id="html_2b69088042db16908762551c1a6958ac" style="width: 100.0%; height: 100.0%;"><b>Mar del Plata 1</b><br>Region: Buenos Aires</div>`)[0];
+                popup_65d5357e78ef0ad7edff23d66d074bc1.setContent(html_2b69088042db16908762551c1a6958ac);
+            
+        
+
+        circle_marker_f2c2554d65036760f877037699355687.bindPopup(popup_65d5357e78ef0ad7edff23d66d074bc1)
+        ;
+
+        
+    
+    
+            circle_marker_f2c2554d65036760f877037699355687.bindTooltip(
+                `<div>
+                     Mar del Plata 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d104853a3b3c1d0fc50b05ba3b28b8a6 = L.circleMarker(
+                [-38.02, -57.54],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_da7a5fed3e8f3906249f16517dbe6cf5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_124ce405777e56e0eefd0750688ad5e6 = $(`<div id="html_124ce405777e56e0eefd0750688ad5e6" style="width: 100.0%; height: 100.0%;"><b>Mar del Plata 2</b><br>Region: Buenos Aires</div>`)[0];
+                popup_da7a5fed3e8f3906249f16517dbe6cf5.setContent(html_124ce405777e56e0eefd0750688ad5e6);
+            
+        
+
+        circle_marker_d104853a3b3c1d0fc50b05ba3b28b8a6.bindPopup(popup_da7a5fed3e8f3906249f16517dbe6cf5)
+        ;
+
+        
+    
+    
+            circle_marker_d104853a3b3c1d0fc50b05ba3b28b8a6.bindTooltip(
+                `<div>
+                     Mar del Plata 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ca0b4f641f54e8c8a8920caa09bbc9f = L.circleMarker(
+                [-38.04, -57.53],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_047c57b74d275dc63dd1d31c8eee031b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_09d1c5c2cf509024cfaa636a6c193da6 = $(`<div id="html_09d1c5c2cf509024cfaa636a6c193da6" style="width: 100.0%; height: 100.0%;"><b>Mar del Plata 3</b><br>Region: Buenos Aires</div>`)[0];
+                popup_047c57b74d275dc63dd1d31c8eee031b.setContent(html_09d1c5c2cf509024cfaa636a6c193da6);
+            
+        
+
+        circle_marker_6ca0b4f641f54e8c8a8920caa09bbc9f.bindPopup(popup_047c57b74d275dc63dd1d31c8eee031b)
+        ;
+
+        
+    
+    
+            circle_marker_6ca0b4f641f54e8c8a8920caa09bbc9f.bindTooltip(
+                `<div>
+                     Mar del Plata 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3972351346661a95feba98bb6aa763ce = L.circleMarker(
+                [-35.45, -60.88],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_cc026dc7fd811103d389c3a324f358fa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_218c5c785fe4c3cbf8d612a4ee4e3758 = $(`<div id="html_218c5c785fe4c3cbf8d612a4ee4e3758" style="width: 100.0%; height: 100.0%;"><b>9 de Julio</b><br>Region: Buenos Aires</div>`)[0];
+                popup_cc026dc7fd811103d389c3a324f358fa.setContent(html_218c5c785fe4c3cbf8d612a4ee4e3758);
+            
+        
+
+        circle_marker_3972351346661a95feba98bb6aa763ce.bindPopup(popup_cc026dc7fd811103d389c3a324f358fa)
+        ;
+
+        
+    
+    
+            circle_marker_3972351346661a95feba98bb6aa763ce.bindTooltip(
+                `<div>
+                     9 de Julio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f743cc4c6651f49a2cde9ceb96d7e286 = L.circleMarker(
+                [-36.62, -64.29],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_993351d73dd2e5c9a08b190e4984f2d5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d703dccd0957925635550daf96ba4b59 = $(`<div id="html_d703dccd0957925635550daf96ba4b59" style="width: 100.0%; height: 100.0%;"><b>Santa Rosa La Pampa</b><br>Region: La Pampa</div>`)[0];
+                popup_993351d73dd2e5c9a08b190e4984f2d5.setContent(html_d703dccd0957925635550daf96ba4b59);
+            
+        
+
+        circle_marker_f743cc4c6651f49a2cde9ceb96d7e286.bindPopup(popup_993351d73dd2e5c9a08b190e4984f2d5)
+        ;
+
+        
+    
+    
+            circle_marker_f743cc4c6651f49a2cde9ceb96d7e286.bindTooltip(
+                `<div>
+                     Santa Rosa La Pampa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a68ec830d1fef1f45b63c197e4400dd5 = L.circleMarker(
+                [-35.65, -63.68],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_1d254cec3c5d818f787c8574d08dac52 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_31d6fd2ce0b2249b45523c22aa10e241 = $(`<div id="html_31d6fd2ce0b2249b45523c22aa10e241" style="width: 100.0%; height: 100.0%;"><b>General Pico</b><br>Region: La Pampa</div>`)[0];
+                popup_1d254cec3c5d818f787c8574d08dac52.setContent(html_31d6fd2ce0b2249b45523c22aa10e241);
+            
+        
+
+        circle_marker_a68ec830d1fef1f45b63c197e4400dd5.bindPopup(popup_1d254cec3c5d818f787c8574d08dac52)
+        ;
+
+        
+    
+    
+            circle_marker_a68ec830d1fef1f45b63c197e4400dd5.bindTooltip(
+                `<div>
+                     General Pico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f5b989b6b6cc4780118393c31cfbfa6 = L.circleMarker(
+                [-32.89, -68.84],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_de06a08eab15d0e96d58485be639ba55 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a4ac90d233299d8663a43521a7176f21 = $(`<div id="html_a4ac90d233299d8663a43521a7176f21" style="width: 100.0%; height: 100.0%;"><b>Electro 2001</b><br>Region: Mendoza</div>`)[0];
+                popup_de06a08eab15d0e96d58485be639ba55.setContent(html_a4ac90d233299d8663a43521a7176f21);
+            
+        
+
+        circle_marker_9f5b989b6b6cc4780118393c31cfbfa6.bindPopup(popup_de06a08eab15d0e96d58485be639ba55)
+        ;
+
+        
+    
+    
+            circle_marker_9f5b989b6b6cc4780118393c31cfbfa6.bindTooltip(
+                `<div>
+                     Electro 2001
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_396a2f3409e2a6f5a250df7e8a29a948 = L.circleMarker(
+                [-32.9, -68.83],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_23afeb977ca3f4dc365ee4ffad3f0960 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_01427fcc6bc7dd05b8b57395116ff6a2 = $(`<div id="html_01427fcc6bc7dd05b8b57395116ff6a2" style="width: 100.0%; height: 100.0%;"><b>Electro Dos</b><br>Region: Mendoza</div>`)[0];
+                popup_23afeb977ca3f4dc365ee4ffad3f0960.setContent(html_01427fcc6bc7dd05b8b57395116ff6a2);
+            
+        
+
+        circle_marker_396a2f3409e2a6f5a250df7e8a29a948.bindPopup(popup_23afeb977ca3f4dc365ee4ffad3f0960)
+        ;
+
+        
+    
+    
+            circle_marker_396a2f3409e2a6f5a250df7e8a29a948.bindTooltip(
+                `<div>
+                     Electro Dos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f157deb60929a6cf4b21ab6bcb4535ba = L.circleMarker(
+                [-32.89, -68.84],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_bf531aaa4164004067934eda5544daa1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1e593a34e11487013bfb087b9bc903c6 = $(`<div id="html_1e593a34e11487013bfb087b9bc903c6" style="width: 100.0%; height: 100.0%;"><b>Centro Comercial Gomez Pardo</b><br>Region: Mendoza</div>`)[0];
+                popup_bf531aaa4164004067934eda5544daa1.setContent(html_1e593a34e11487013bfb087b9bc903c6);
+            
+        
+
+        circle_marker_f157deb60929a6cf4b21ab6bcb4535ba.bindPopup(popup_bf531aaa4164004067934eda5544daa1)
+        ;
+
+        
+    
+    
+            circle_marker_f157deb60929a6cf4b21ab6bcb4535ba.bindTooltip(
+                `<div>
+                     Centro Comercial Gomez Pardo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39215769112623f578eef7b50c7954f0 = L.circleMarker(
+                [-32.89, -68.83],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_e9b38396de3b31cdceb0c175b82cfe5e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4c1b7c0f181abaac02d35a7dbef59c81 = $(`<div id="html_4c1b7c0f181abaac02d35a7dbef59c81" style="width: 100.0%; height: 100.0%;"><b>Terrazas del Portezuelo</b><br>Region: Mendoza</div>`)[0];
+                popup_e9b38396de3b31cdceb0c175b82cfe5e.setContent(html_4c1b7c0f181abaac02d35a7dbef59c81);
+            
+        
+
+        circle_marker_39215769112623f578eef7b50c7954f0.bindPopup(popup_e9b38396de3b31cdceb0c175b82cfe5e)
+        ;
+
+        
+    
+    
+            circle_marker_39215769112623f578eef7b50c7954f0.bindTooltip(
+                `<div>
+                     Terrazas del Portezuelo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_995acb2b84264754f1bf572b6014e65e = L.circleMarker(
+                [-34.62, -68.33],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_2da5bd7101be95a99816da6d05394859 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_26225c42e9e219a56c722e4649f46566 = $(`<div id="html_26225c42e9e219a56c722e4649f46566" style="width: 100.0%; height: 100.0%;"><b>San Rafael Mendoza</b><br>Region: Mendoza</div>`)[0];
+                popup_2da5bd7101be95a99816da6d05394859.setContent(html_26225c42e9e219a56c722e4649f46566);
+            
+        
+
+        circle_marker_995acb2b84264754f1bf572b6014e65e.bindPopup(popup_2da5bd7101be95a99816da6d05394859)
+        ;
+
+        
+    
+    
+            circle_marker_995acb2b84264754f1bf572b6014e65e.bindTooltip(
+                `<div>
+                     San Rafael Mendoza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60c199dca33bc7983d9f6c1939370eb0 = L.circleMarker(
+                [-33.3, -66.34],
+                {"bubblingMouseEvents": true, "color": "darkpurple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkpurple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_36cc8961ab2a470f0f5537b9314a0682 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_febfa10f6f00e35fd139f96f90c2f5e0 = $(`<div id="html_febfa10f6f00e35fd139f96f90c2f5e0" style="width: 100.0%; height: 100.0%;"><b>Equipel San Luis</b><br>Region: San Luis</div>`)[0];
+                popup_36cc8961ab2a470f0f5537b9314a0682.setContent(html_febfa10f6f00e35fd139f96f90c2f5e0);
+            
+        
+
+        circle_marker_60c199dca33bc7983d9f6c1939370eb0.bindPopup(popup_36cc8961ab2a470f0f5537b9314a0682)
+        ;
+
+        
+    
+    
+            circle_marker_60c199dca33bc7983d9f6c1939370eb0.bindTooltip(
+                `<div>
+                     Equipel San Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5346053be6d59ae9a7fe4b15f4568aab = L.circleMarker(
+                [-33.3, -66.33],
+                {"bubblingMouseEvents": true, "color": "darkpurple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkpurple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_9fdc38068e4ac0632a05b17243a56e3f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6dec0f8bdcba438c5e1c94a8bb4bf2ae = $(`<div id="html_6dec0f8bdcba438c5e1c94a8bb4bf2ae" style="width: 100.0%; height: 100.0%;"><b>Nuevo Sur San Luis</b><br>Region: San Luis</div>`)[0];
+                popup_9fdc38068e4ac0632a05b17243a56e3f.setContent(html_6dec0f8bdcba438c5e1c94a8bb4bf2ae);
+            
+        
+
+        circle_marker_5346053be6d59ae9a7fe4b15f4568aab.bindPopup(popup_9fdc38068e4ac0632a05b17243a56e3f)
+        ;
+
+        
+    
+    
+            circle_marker_5346053be6d59ae9a7fe4b15f4568aab.bindTooltip(
+                `<div>
+                     Nuevo Sur San Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60e261a3e7192a353cc4e09808e4e397 = L.circleMarker(
+                [-33.67, -65.46],
+                {"bubblingMouseEvents": true, "color": "darkpurple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkpurple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_6dce330f4c1ee9eed77fee042ed9de87 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ca1ed993f574b03faeb00e6b29ceacb8 = $(`<div id="html_ca1ed993f574b03faeb00e6b29ceacb8" style="width: 100.0%; height: 100.0%;"><b>FG Industrial</b><br>Region: San Luis</div>`)[0];
+                popup_6dce330f4c1ee9eed77fee042ed9de87.setContent(html_ca1ed993f574b03faeb00e6b29ceacb8);
+            
+        
+
+        circle_marker_60e261a3e7192a353cc4e09808e4e397.bindPopup(popup_6dce330f4c1ee9eed77fee042ed9de87)
+        ;
+
+        
+    
+    
+            circle_marker_60e261a3e7192a353cc4e09808e4e397.bindTooltip(
+                `<div>
+                     FG Industrial
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b68b2d1c945b4ad57039f9dcf46e2681 = L.circleMarker(
+                [-31.53, -68.53],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_fe59813146cadfe5786587a322387f63 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ab0512d6202744bef83b229dc282ccb8 = $(`<div id="html_ab0512d6202744bef83b229dc282ccb8" style="width: 100.0%; height: 100.0%;"><b>San Juan Capital</b><br>Region: San Juan</div>`)[0];
+                popup_fe59813146cadfe5786587a322387f63.setContent(html_ab0512d6202744bef83b229dc282ccb8);
+            
+        
+
+        circle_marker_b68b2d1c945b4ad57039f9dcf46e2681.bindPopup(popup_fe59813146cadfe5786587a322387f63)
+        ;
+
+        
+    
+    
+            circle_marker_b68b2d1c945b4ad57039f9dcf46e2681.bindTooltip(
+                `<div>
+                     San Juan Capital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd98366de15e421e5c994ae93f1097fb = L.circleMarker(
+                [-24.79, -65.41],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_c933ad7c0c57f84ccf8b4f6f61735600 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_73c0de9a47678e16bd190774e64bd825 = $(`<div id="html_73c0de9a47678e16bd190774e64bd825" style="width: 100.0%; height: 100.0%;"><b>BP Salta</b><br>Region: NOA</div>`)[0];
+                popup_c933ad7c0c57f84ccf8b4f6f61735600.setContent(html_73c0de9a47678e16bd190774e64bd825);
+            
+        
+
+        circle_marker_dd98366de15e421e5c994ae93f1097fb.bindPopup(popup_c933ad7c0c57f84ccf8b4f6f61735600)
+        ;
+
+        
+    
+    
+            circle_marker_dd98366de15e421e5c994ae93f1097fb.bindTooltip(
+                `<div>
+                     BP Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6fc0217203d328871b048b3029313eb = L.circleMarker(
+                [-26.81, -65.29],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_b32476cbb9c378e33d49e1e7f37a02e1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b6b71cb01bd17645d725846bbd70a409 = $(`<div id="html_b6b71cb01bd17645d725846bbd70a409" style="width: 100.0%; height: 100.0%;"><b>BP Yerba Buena</b><br>Region: NOA</div>`)[0];
+                popup_b32476cbb9c378e33d49e1e7f37a02e1.setContent(html_b6b71cb01bd17645d725846bbd70a409);
+            
+        
+
+        circle_marker_f6fc0217203d328871b048b3029313eb.bindPopup(popup_b32476cbb9c378e33d49e1e7f37a02e1)
+        ;
+
+        
+    
+    
+            circle_marker_f6fc0217203d328871b048b3029313eb.bindTooltip(
+                `<div>
+                     BP Yerba Buena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d07e7755fd2936aa37f00e7bbafab742 = L.circleMarker(
+                [-27.45, -65.28],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_205700b87f22fe84fd44b2f41882dc99 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9a68485c93ab680a5ba673a712f22e63 = $(`<div id="html_9a68485c93ab680a5ba673a712f22e63" style="width: 100.0%; height: 100.0%;"><b>Parque Mitre Salta</b><br>Region: NOA</div>`)[0];
+                popup_205700b87f22fe84fd44b2f41882dc99.setContent(html_9a68485c93ab680a5ba673a712f22e63);
+            
+        
+
+        circle_marker_d07e7755fd2936aa37f00e7bbafab742.bindPopup(popup_205700b87f22fe84fd44b2f41882dc99)
+        ;
+
+        
+    
+    
+            circle_marker_d07e7755fd2936aa37f00e7bbafab742.bindTooltip(
+                `<div>
+                     Parque Mitre Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_011cd7d0c14e5f992f0b068a5a46bbb0 = L.circleMarker(
+                [-28.47, -65.78],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_479d2ee38e61841da47ea9cecdd78f71 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3de6093c32c223316ceef1d6fe764ddd = $(`<div id="html_3de6093c32c223316ceef1d6fe764ddd" style="width: 100.0%; height: 100.0%;"><b>Matelec Catamarca</b><br>Region: NOA</div>`)[0];
+                popup_479d2ee38e61841da47ea9cecdd78f71.setContent(html_3de6093c32c223316ceef1d6fe764ddd);
+            
+        
+
+        circle_marker_011cd7d0c14e5f992f0b068a5a46bbb0.bindPopup(popup_479d2ee38e61841da47ea9cecdd78f71)
+        ;
+
+        
+    
+    
+            circle_marker_011cd7d0c14e5f992f0b068a5a46bbb0.bindTooltip(
+                `<div>
+                     Matelec Catamarca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6080db29c4d3a36ae58b2e8011ef10dc = L.circleMarker(
+                [-38.92, -68.09],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_b374c7d5fe6d14673d2f5cf1c6ba48c8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c81e2b6469b8a5d3068f16f936055835 = $(`<div id="html_c81e2b6469b8a5d3068f16f936055835" style="width: 100.0%; height: 100.0%;"><b>Neuquén Scame 1</b><br>Region: Neuquén</div>`)[0];
+                popup_b374c7d5fe6d14673d2f5cf1c6ba48c8.setContent(html_c81e2b6469b8a5d3068f16f936055835);
+            
+        
+
+        circle_marker_6080db29c4d3a36ae58b2e8011ef10dc.bindPopup(popup_b374c7d5fe6d14673d2f5cf1c6ba48c8)
+        ;
+
+        
+    
+    
+            circle_marker_6080db29c4d3a36ae58b2e8011ef10dc.bindTooltip(
+                `<div>
+                     Neuquén Scame 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4da45f040365960e90b4d9ca4e54e844 = L.circleMarker(
+                [-38.95, -68.07],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_f73d50b43d1976875394e18a379b1cc8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_688d69cdef5c47910df2ca466de82461 = $(`<div id="html_688d69cdef5c47910df2ca466de82461" style="width: 100.0%; height: 100.0%;"><b>Neuquén Scame 2</b><br>Region: Neuquén</div>`)[0];
+                popup_f73d50b43d1976875394e18a379b1cc8.setContent(html_688d69cdef5c47910df2ca466de82461);
+            
+        
+
+        circle_marker_4da45f040365960e90b4d9ca4e54e844.bindPopup(popup_f73d50b43d1976875394e18a379b1cc8)
+        ;
+
+        
+    
+    
+            circle_marker_4da45f040365960e90b4d9ca4e54e844.bindTooltip(
+                `<div>
+                     Neuquén Scame 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f5de0e9d80c2c11bc791042e6538b6a = L.circleMarker(
+                [-38.97, -68.06],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_3d6b85d7612860dfe3f674aa2a62aed8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fad59a39498d19d7571e91464aa82393 = $(`<div id="html_fad59a39498d19d7571e91464aa82393" style="width: 100.0%; height: 100.0%;"><b>Neuquén Scame 3</b><br>Region: Neuquén</div>`)[0];
+                popup_3d6b85d7612860dfe3f674aa2a62aed8.setContent(html_fad59a39498d19d7571e91464aa82393);
+            
+        
+
+        circle_marker_8f5de0e9d80c2c11bc791042e6538b6a.bindPopup(popup_3d6b85d7612860dfe3f674aa2a62aed8)
+        ;
+
+        
+    
+    
+            circle_marker_8f5de0e9d80c2c11bc791042e6538b6a.bindTooltip(
+                `<div>
+                     Neuquén Scame 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9b4ab637098981ce4cf003e0efdef0cc = L.circleMarker(
+                [-45.86, -67.49],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_4b1a804ba2d717fd7e16f1ede503d853 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f0734d81cfa155538e53e27a654aee34 = $(`<div id="html_f0734d81cfa155538e53e27a654aee34" style="width: 100.0%; height: 100.0%;"><b>Comodoro Conocimiento</b><br>Region: Patagonia</div>`)[0];
+                popup_4b1a804ba2d717fd7e16f1ede503d853.setContent(html_f0734d81cfa155538e53e27a654aee34);
+            
+        
+
+        circle_marker_9b4ab637098981ce4cf003e0efdef0cc.bindPopup(popup_4b1a804ba2d717fd7e16f1ede503d853)
+        ;
+
+        
+    
+    
+            circle_marker_9b4ab637098981ce4cf003e0efdef0cc.bindTooltip(
+                `<div>
+                     Comodoro Conocimiento
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3448106447760c1fcb8b3bc379274a6 = L.circleMarker(
+                [-42.77, -65.04],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_b271990ca00c638436c73e497694f864 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7bec2facb85f5f0d4e81f11749eadd66 = $(`<div id="html_7bec2facb85f5f0d4e81f11749eadd66" style="width: 100.0%; height: 100.0%;"><b>Puerto Madryn</b><br>Region: Patagonia</div>`)[0];
+                popup_b271990ca00c638436c73e497694f864.setContent(html_7bec2facb85f5f0d4e81f11749eadd66);
+            
+        
+
+        circle_marker_e3448106447760c1fcb8b3bc379274a6.bindPopup(popup_b271990ca00c638436c73e497694f864)
+        ;
+
+        
+    
+    
+            circle_marker_e3448106447760c1fcb8b3bc379274a6.bindTooltip(
+                `<div>
+                     Puerto Madryn
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e49afe6a098f96ae83972af611076750 = L.circleMarker(
+                [-33.01, -58.52],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_364eb15bcfd2f25839c0b243ce787c7a);
+        
+    
+        var popup_36ffa3931268b58df3ad7e4f07e836fc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_96902e6d85c6bb611c22d793d2626921 = $(`<div id="html_96902e6d85c6bb611c22d793d2626921" style="width: 100.0%; height: 100.0%;"><b>Cooperativa Eléctrica Gualeguaychú</b><br>Region: Entre Ríos</div>`)[0];
+                popup_36ffa3931268b58df3ad7e4f07e836fc.setContent(html_96902e6d85c6bb611c22d793d2626921);
+            
+        
+
+        circle_marker_e49afe6a098f96ae83972af611076750.bindPopup(popup_36ffa3931268b58df3ad7e4f07e836fc)
+        ;
+
+        
+    
+    
+            circle_marker_e49afe6a098f96ae83972af611076750.bindTooltip(
+                `<div>
+                     Cooperativa Eléctrica Gualeguaychú
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
