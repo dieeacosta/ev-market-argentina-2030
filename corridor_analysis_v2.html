@@ -1,0 +1,4722 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bc15ac985ad57ec6b465902395efc7c8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 30px; left: 30px; z-index: 1000;
+     background: white; padding: 12px; border-radius: 8px;
+     border: 1px solid #ccc; font-size: 13px; line-height: 1.8;">
+  <b>4.2 — National Corridor Analysis v2</b><br>
+  🟢 Existing station<br>
+  🔴 Suggested new station<br>
+  ── Route corridor
+</div>
+    
+            <div class="folium-map" id="map_bc15ac985ad57ec6b465902395efc7c8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bc15ac985ad57ec6b465902395efc7c8 = L.map(
+                "map_bc15ac985ad57ec6b465902395efc7c8",
+                {
+                    center: [-38.0, -63.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_af07d48b9c37691964334d206fdde802 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_af07d48b9c37691964334d206fdde802.addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var circle_marker_ccbcf0f5b4475dcb40ba45039493a6e0 = L.circleMarker(
+                [-32.65, -68.47],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_961fcab146317d655ce8feecbe90f6b1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a426a6156ff705e7abe1ef903e849051 = $(`<div id="html_a426a6156ff705e7abe1ef903e849051" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Ruta 7 Peaje Desaguadero</div>`)[0];
+                popup_961fcab146317d655ce8feecbe90f6b1.setContent(html_a426a6156ff705e7abe1ef903e849051);
+            
+        
+
+        circle_marker_ccbcf0f5b4475dcb40ba45039493a6e0.bindPopup(popup_961fcab146317d655ce8feecbe90f6b1)
+        ;
+
+        
+    
+    
+            circle_marker_ccbcf0f5b4475dcb40ba45039493a6e0.bindTooltip(
+                `<div>
+                     ✅ Ruta 7 Peaje Desaguadero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_318794e46e9034a86924a761d5a4655e = L.circleMarker(
+                [-33.55, -67.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_bfbebe8312bf04c3091f15a094a2b2c8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_93563782ae0fd5f5154f47b0584c20fd = $(`<div id="html_93563782ae0fd5f5154f47b0584c20fd" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Ruta 7 Peaje La Cumbre</div>`)[0];
+                popup_bfbebe8312bf04c3091f15a094a2b2c8.setContent(html_93563782ae0fd5f5154f47b0584c20fd);
+            
+        
+
+        circle_marker_318794e46e9034a86924a761d5a4655e.bindPopup(popup_bfbebe8312bf04c3091f15a094a2b2c8)
+        ;
+
+        
+    
+    
+            circle_marker_318794e46e9034a86924a761d5a4655e.bindTooltip(
+                `<div>
+                     ✅ Ruta 7 Peaje La Cumbre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ac62e47bb6b9135e03594734b19fa00 = L.circleMarker(
+                [-33.67, -65.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_e13f991abb3a4334d949dce2e2d33034 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6ce55efa7db54a533c6c07245416bcf9 = $(`<div id="html_6ce55efa7db54a533c6c07245416bcf9" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Ruta 7 Peaje Justo Daract</div>`)[0];
+                popup_e13f991abb3a4334d949dce2e2d33034.setContent(html_6ce55efa7db54a533c6c07245416bcf9);
+            
+        
+
+        circle_marker_3ac62e47bb6b9135e03594734b19fa00.bindPopup(popup_e13f991abb3a4334d949dce2e2d33034)
+        ;
+
+        
+    
+    
+            circle_marker_3ac62e47bb6b9135e03594734b19fa00.bindTooltip(
+                `<div>
+                     ✅ Ruta 7 Peaje Justo Daract
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_84be7ca571458041a74d605357c0d34c = L.circleMarker(
+                [-31.65, -63.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_75a2da1f5059806f76170f5a3e11f5c8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_52e362f80267b557da7c402cbdbd7b21 = $(`<div id="html_52e362f80267b557da7c402cbdbd7b21" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> YPF Rio Segundo Ascendente</div>`)[0];
+                popup_75a2da1f5059806f76170f5a3e11f5c8.setContent(html_52e362f80267b557da7c402cbdbd7b21);
+            
+        
+
+        circle_marker_84be7ca571458041a74d605357c0d34c.bindPopup(popup_75a2da1f5059806f76170f5a3e11f5c8)
+        ;
+
+        
+    
+    
+            circle_marker_84be7ca571458041a74d605357c0d34c.bindTooltip(
+                `<div>
+                     ✅ YPF Rio Segundo Ascendente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9699aa8c4cddb4f652f36bbe29f93ec = L.circleMarker(
+                [-31.65, -63.66],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_90e474e406aa7ea70f21a08c75fcdb5b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_554f04d8a4ede468a10d7ca63e072ed9 = $(`<div id="html_554f04d8a4ede468a10d7ca63e072ed9" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> YPF Rio Segundo Descendente</div>`)[0];
+                popup_90e474e406aa7ea70f21a08c75fcdb5b.setContent(html_554f04d8a4ede468a10d7ca63e072ed9);
+            
+        
+
+        circle_marker_b9699aa8c4cddb4f652f36bbe29f93ec.bindPopup(popup_90e474e406aa7ea70f21a08c75fcdb5b)
+        ;
+
+        
+    
+    
+            circle_marker_b9699aa8c4cddb4f652f36bbe29f93ec.bindTooltip(
+                `<div>
+                     ✅ YPF Rio Segundo Descendente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_915f04ff314123c27b49f5deef25e1e5 = L.circleMarker(
+                [-31.38, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_354826c2c8aa0318d4aa4d68f763270e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e9cc48a4c846b2f8d82166fe7fc8be22 = $(`<div id="html_e9cc48a4c846b2f8d82166fe7fc8be22" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> YPF Lucam Córdoba</div>`)[0];
+                popup_354826c2c8aa0318d4aa4d68f763270e.setContent(html_e9cc48a4c846b2f8d82166fe7fc8be22);
+            
+        
+
+        circle_marker_915f04ff314123c27b49f5deef25e1e5.bindPopup(popup_354826c2c8aa0318d4aa4d68f763270e)
+        ;
+
+        
+    
+    
+            circle_marker_915f04ff314123c27b49f5deef25e1e5.bindTooltip(
+                `<div>
+                     ✅ YPF Lucam Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecbd886e652c73defc3480aaa5a743ec = L.circleMarker(
+                [-31.4, -64.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_ca27a61cc7df4e7f83fd1d2e80e946fb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_18795b90efeab8bba5cf06fee87a76a8 = $(`<div id="html_18795b90efeab8bba5cf06fee87a76a8" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> YPF Vensim Córdoba</div>`)[0];
+                popup_ca27a61cc7df4e7f83fd1d2e80e946fb.setContent(html_18795b90efeab8bba5cf06fee87a76a8);
+            
+        
+
+        circle_marker_ecbd886e652c73defc3480aaa5a743ec.bindPopup(popup_ca27a61cc7df4e7f83fd1d2e80e946fb)
+        ;
+
+        
+    
+    
+            circle_marker_ecbd886e652c73defc3480aaa5a743ec.bindTooltip(
+                `<div>
+                     ✅ YPF Vensim Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8fd6c6e122665cab638375784563715 = L.circleMarker(
+                [-31.42, -64.22],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_8562d5dbed6385bf218f4083701d41fb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c218bdac8e24fd2649f115fe79c70d07 = $(`<div id="html_c218bdac8e24fd2649f115fe79c70d07" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> YPF Punto Panorámico Córdoba</div>`)[0];
+                popup_8562d5dbed6385bf218f4083701d41fb.setContent(html_c218bdac8e24fd2649f115fe79c70d07);
+            
+        
+
+        circle_marker_f8fd6c6e122665cab638375784563715.bindPopup(popup_8562d5dbed6385bf218f4083701d41fb)
+        ;
+
+        
+    
+    
+            circle_marker_f8fd6c6e122665cab638375784563715.bindTooltip(
+                `<div>
+                     ✅ YPF Punto Panorámico Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b99045ca045099c6516956cc9f411f95 = L.circleMarker(
+                [-31.41, -64.19],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_9f423eee7609e22d2a6f6f70f9fc6365 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0347804542b7e5e34d17de558b90903b = $(`<div id="html_0347804542b7e5e34d17de558b90903b" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> EPEC Córdoba</div>`)[0];
+                popup_9f423eee7609e22d2a6f6f70f9fc6365.setContent(html_0347804542b7e5e34d17de558b90903b);
+            
+        
+
+        circle_marker_b99045ca045099c6516956cc9f411f95.bindPopup(popup_9f423eee7609e22d2a6f6f70f9fc6365)
+        ;
+
+        
+    
+    
+            circle_marker_b99045ca045099c6516956cc9f411f95.bindTooltip(
+                `<div>
+                     ✅ EPEC Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ab92b75ddfbb51544b4a2b7041359f4 = L.circleMarker(
+                [-32.69, -62.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_a5568fcb00f10311f9f0c67a052e728c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b955a5d5259d27228c57010021bd2db7 = $(`<div id="html_b955a5d5259d27228c57010021bd2db7" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> EPEC Marcos Juárez</div>`)[0];
+                popup_a5568fcb00f10311f9f0c67a052e728c.setContent(html_b955a5d5259d27228c57010021bd2db7);
+            
+        
+
+        circle_marker_1ab92b75ddfbb51544b4a2b7041359f4.bindPopup(popup_a5568fcb00f10311f9f0c67a052e728c)
+        ;
+
+        
+    
+    
+            circle_marker_1ab92b75ddfbb51544b4a2b7041359f4.bindTooltip(
+                `<div>
+                     ✅ EPEC Marcos Juárez
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_beeacc8b4d40d45208dd1edf6464a2ff = L.circleMarker(
+                [-32.41, -63.24],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_cc8a43a0ed22d59204cc2d190626f295 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fadc28fb11bb2d7652f9c272accbd13f = $(`<div id="html_fadc28fb11bb2d7652f9c272accbd13f" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Villa María EPEC</div>`)[0];
+                popup_cc8a43a0ed22d59204cc2d190626f295.setContent(html_fadc28fb11bb2d7652f9c272accbd13f);
+            
+        
+
+        circle_marker_beeacc8b4d40d45208dd1edf6464a2ff.bindPopup(popup_cc8a43a0ed22d59204cc2d190626f295)
+        ;
+
+        
+    
+    
+            circle_marker_beeacc8b4d40d45208dd1edf6464a2ff.bindTooltip(
+                `<div>
+                     ✅ Villa María EPEC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38fa3e1912c2a56818a0927e6c54023a = L.circleMarker(
+                [-31.42, -64.49],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_ae6133495a4bd6c9e3701222fcc6aabb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f5798183c26f22b536f2e1e2df4d1f8a = $(`<div id="html_f5798183c26f22b536f2e1e2df4d1f8a" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Shopping Tierra Chica</div>`)[0];
+                popup_ae6133495a4bd6c9e3701222fcc6aabb.setContent(html_f5798183c26f22b536f2e1e2df4d1f8a);
+            
+        
+
+        circle_marker_38fa3e1912c2a56818a0927e6c54023a.bindPopup(popup_ae6133495a4bd6c9e3701222fcc6aabb)
+        ;
+
+        
+    
+    
+            circle_marker_38fa3e1912c2a56818a0927e6c54023a.bindTooltip(
+                `<div>
+                     ✅ Shopping Tierra Chica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9f0779bfbbca2167d681c50dbc44d99 = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_830a5148e9f536af44ad80041508cabf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f87e848865cd94f7feca09d328443f3 = $(`<div id="html_2f87e848865cd94f7feca09d328443f3" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Equipel Córdoba</div>`)[0];
+                popup_830a5148e9f536af44ad80041508cabf.setContent(html_2f87e848865cd94f7feca09d328443f3);
+            
+        
+
+        circle_marker_a9f0779bfbbca2167d681c50dbc44d99.bindPopup(popup_830a5148e9f536af44ad80041508cabf)
+        ;
+
+        
+    
+    
+            circle_marker_a9f0779bfbbca2167d681c50dbc44d99.bindTooltip(
+                `<div>
+                     ✅ Equipel Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02c33986c13fb30d9be24f1ca7fe67e0 = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_cb6973588b1b5316718a1b8812110f34 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5d94f447ad1f1eb2d8fdd536094f3b32 = $(`<div id="html_5d94f447ad1f1eb2d8fdd536094f3b32" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Sierra Electricidad</div>`)[0];
+                popup_cb6973588b1b5316718a1b8812110f34.setContent(html_5d94f447ad1f1eb2d8fdd536094f3b32);
+            
+        
+
+        circle_marker_02c33986c13fb30d9be24f1ca7fe67e0.bindPopup(popup_cb6973588b1b5316718a1b8812110f34)
+        ;
+
+        
+    
+    
+            circle_marker_02c33986c13fb30d9be24f1ca7fe67e0.bindTooltip(
+                `<div>
+                     ✅ Sierra Electricidad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7fa0bb00bd2123db78839f67b6b4fe1 = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_218a24be9007b287655d7bfe04d393c9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ae031df4828e94dd28f393c58ac8a442 = $(`<div id="html_ae031df4828e94dd28f393c58ac8a442" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> City Center</div>`)[0];
+                popup_218a24be9007b287655d7bfe04d393c9.setContent(html_ae031df4828e94dd28f393c58ac8a442);
+            
+        
+
+        circle_marker_d7fa0bb00bd2123db78839f67b6b4fe1.bindPopup(popup_218a24be9007b287655d7bfe04d393c9)
+        ;
+
+        
+    
+    
+            circle_marker_d7fa0bb00bd2123db78839f67b6b4fe1.bindTooltip(
+                `<div>
+                     ✅ City Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7b9b6c699b7bb377e62f523a667414e = L.circleMarker(
+                [-32.74, -60.73],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_25d773067422fe16f00235c22bf77fb9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2b834db40bb7d387b8d72cc46f72d2e7 = $(`<div id="html_2b834db40bb7d387b8d72cc46f72d2e7" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Shopping Plaza San Lorenzo</div>`)[0];
+                popup_25d773067422fe16f00235c22bf77fb9.setContent(html_2b834db40bb7d387b8d72cc46f72d2e7);
+            
+        
+
+        circle_marker_e7b9b6c699b7bb377e62f523a667414e.bindPopup(popup_25d773067422fe16f00235c22bf77fb9)
+        ;
+
+        
+    
+    
+            circle_marker_e7b9b6c699b7bb377e62f523a667414e.bindTooltip(
+                `<div>
+                     ✅ Shopping Plaza San Lorenzo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_793bd84d393304f9542d3c82348c5ab6 = L.circleMarker(
+                [-32.89, -60.9],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_7f2a11dd0120a0488cca3bcdf2037676 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3fcb0346cdc5c706ee031570ed3a2cae = $(`<div id="html_3fcb0346cdc5c706ee031570ed3a2cae" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Parque Industrial Roldán</div>`)[0];
+                popup_7f2a11dd0120a0488cca3bcdf2037676.setContent(html_3fcb0346cdc5c706ee031570ed3a2cae);
+            
+        
+
+        circle_marker_793bd84d393304f9542d3c82348c5ab6.bindPopup(popup_7f2a11dd0120a0488cca3bcdf2037676)
+        ;
+
+        
+    
+    
+            circle_marker_793bd84d393304f9542d3c82348c5ab6.bindTooltip(
+                `<div>
+                     ✅ Parque Industrial Roldán
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15518f8ac4e3dcb9842925bc82cfbf3a = L.circleMarker(
+                [-32.95, -60.65],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_4e7fb28b39b8463a41e12d1cb55da8b1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3b2e903e36bb2bde5f449eae545ba928 = $(`<div id="html_3b2e903e36bb2bde5f449eae545ba928" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Pastorutti</div>`)[0];
+                popup_4e7fb28b39b8463a41e12d1cb55da8b1.setContent(html_3b2e903e36bb2bde5f449eae545ba928);
+            
+        
+
+        circle_marker_15518f8ac4e3dcb9842925bc82cfbf3a.bindPopup(popup_4e7fb28b39b8463a41e12d1cb55da8b1)
+        ;
+
+        
+    
+    
+            circle_marker_15518f8ac4e3dcb9842925bc82cfbf3a.bindTooltip(
+                `<div>
+                     ✅ Pastorutti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da43135f4a1e2970b75f975b5deb87a3 = L.circleMarker(
+                [-32.94, -60.7],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_b18c404be306a3345969cbc471fe243f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_338e8c0fa5932c0e06fe25d4e28a5587 = $(`<div id="html_338e8c0fa5932c0e06fe25d4e28a5587" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Greco</div>`)[0];
+                popup_b18c404be306a3345969cbc471fe243f.setContent(html_338e8c0fa5932c0e06fe25d4e28a5587);
+            
+        
+
+        circle_marker_da43135f4a1e2970b75f975b5deb87a3.bindPopup(popup_b18c404be306a3345969cbc471fe243f)
+        ;
+
+        
+    
+    
+            circle_marker_da43135f4a1e2970b75f975b5deb87a3.bindTooltip(
+                `<div>
+                     ✅ Greco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03bb96f6cf8faa8835eb0337417b585d = L.circleMarker(
+                [-32.95, -60.64],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_5a6463f32ca72cd78ca44dcb036204cc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_44b06e305971e3f130d2775070f62ea2 = $(`<div id="html_44b06e305971e3f130d2775070f62ea2" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Serra Electricidad Rosario</div>`)[0];
+                popup_5a6463f32ca72cd78ca44dcb036204cc.setContent(html_44b06e305971e3f130d2775070f62ea2);
+            
+        
+
+        circle_marker_03bb96f6cf8faa8835eb0337417b585d.bindPopup(popup_5a6463f32ca72cd78ca44dcb036204cc)
+        ;
+
+        
+    
+    
+            circle_marker_03bb96f6cf8faa8835eb0337417b585d.bindTooltip(
+                `<div>
+                     ✅ Serra Electricidad Rosario
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6bc83b9e8e83a816836039d1e87120eb = L.circleMarker(
+                [-31.63, -60.7],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_6deccd18f634acf6ca4ec733fe98ff0b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f6ba45e56da37d50f206232660dc8dcf = $(`<div id="html_f6ba45e56da37d50f206232660dc8dcf" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Contelec</div>`)[0];
+                popup_6deccd18f634acf6ca4ec733fe98ff0b.setContent(html_f6ba45e56da37d50f206232660dc8dcf);
+            
+        
+
+        circle_marker_6bc83b9e8e83a816836039d1e87120eb.bindPopup(popup_6deccd18f634acf6ca4ec733fe98ff0b)
+        ;
+
+        
+    
+    
+            circle_marker_6bc83b9e8e83a816836039d1e87120eb.bindTooltip(
+                `<div>
+                     ✅ Contelec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6c9f1a77847127ad4a217b4c98a1e1b = L.circleMarker(
+                [-31.73, -60.53],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_d0819eaf16c4c8bdaba9882f2f7bd1b5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_06dd4867e9e03595ac8600426b539409 = $(`<div id="html_06dd4867e9e03595ac8600426b539409" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Dygelec</div>`)[0];
+                popup_d0819eaf16c4c8bdaba9882f2f7bd1b5.setContent(html_06dd4867e9e03595ac8600426b539409);
+            
+        
+
+        circle_marker_f6c9f1a77847127ad4a217b4c98a1e1b.bindPopup(popup_d0819eaf16c4c8bdaba9882f2f7bd1b5)
+        ;
+
+        
+    
+    
+            circle_marker_f6c9f1a77847127ad4a217b4c98a1e1b.bindTooltip(
+                `<div>
+                     ✅ Dygelec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45b8afa2ac5a316e12689ee8f3973e39 = L.circleMarker(
+                [-31.63, -60.7],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_9f3b4f3c3b84a5d5e68311e354a66c66 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cf3bc3e0a7783b61ecfe6daebda038f3 = $(`<div id="html_cf3bc3e0a7783b61ecfe6daebda038f3" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Serra Electricidad SF</div>`)[0];
+                popup_9f3b4f3c3b84a5d5e68311e354a66c66.setContent(html_cf3bc3e0a7783b61ecfe6daebda038f3);
+            
+        
+
+        circle_marker_45b8afa2ac5a316e12689ee8f3973e39.bindPopup(popup_9f3b4f3c3b84a5d5e68311e354a66c66)
+        ;
+
+        
+    
+    
+            circle_marker_45b8afa2ac5a316e12689ee8f3973e39.bindTooltip(
+                `<div>
+                     ✅ Serra Electricidad SF
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a4fa3cc87e2b24290f47a364af57869c = L.circleMarker(
+                [-33.73, -61.96],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_9c9946ab81fe9d52810984a54740b3d2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_71106ada0d15fdb0e627e455ed9fea67 = $(`<div id="html_71106ada0d15fdb0e627e455ed9fea67" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Serra Electricidad Pergamino</div>`)[0];
+                popup_9c9946ab81fe9d52810984a54740b3d2.setContent(html_71106ada0d15fdb0e627e455ed9fea67);
+            
+        
+
+        circle_marker_a4fa3cc87e2b24290f47a364af57869c.bindPopup(popup_9c9946ab81fe9d52810984a54740b3d2)
+        ;
+
+        
+    
+    
+            circle_marker_a4fa3cc87e2b24290f47a364af57869c.bindTooltip(
+                `<div>
+                     ✅ Serra Electricidad Pergamino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c9e6db07a311319b16913d7a0ace4531 = L.circleMarker(
+                [-33.89, -60.57],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_be3c2f9cfd913fe67d571c67bb83564a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cf820f832eeba66422a4d3ac0f982915 = $(`<div id="html_cf820f832eeba66422a4d3ac0f982915" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Transelec Pergamino</div>`)[0];
+                popup_be3c2f9cfd913fe67d571c67bb83564a.setContent(html_cf820f832eeba66422a4d3ac0f982915);
+            
+        
+
+        circle_marker_c9e6db07a311319b16913d7a0ace4531.bindPopup(popup_be3c2f9cfd913fe67d571c67bb83564a)
+        ;
+
+        
+    
+    
+            circle_marker_c9e6db07a311319b16913d7a0ace4531.bindTooltip(
+                `<div>
+                     ✅ Transelec Pergamino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f9c7efdee3b821f30e60b7a7863e7fde = L.circleMarker(
+                [-34.61, -58.36],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_909f775c6f8e334ede7781e55436786b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_08084efb3869d9cffb6a3ccb420d4aa5 = $(`<div id="html_08084efb3869d9cffb6a3ccb420d4aa5" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Madero Harbour</div>`)[0];
+                popup_909f775c6f8e334ede7781e55436786b.setContent(html_08084efb3869d9cffb6a3ccb420d4aa5);
+            
+        
+
+        circle_marker_f9c7efdee3b821f30e60b7a7863e7fde.bindPopup(popup_909f775c6f8e334ede7781e55436786b)
+        ;
+
+        
+    
+    
+            circle_marker_f9c7efdee3b821f30e60b7a7863e7fde.bindTooltip(
+                `<div>
+                     ✅ Madero Harbour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cdb755d79ab21daa485243a546674c7 = L.circleMarker(
+                [-34.6, -58.38],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_f5d5319b8faa322016cf24a4f52a2135 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6cfd44ffa46efcbfe51c20aad4963cfe = $(`<div id="html_6cfd44ffa46efcbfe51c20aad4963cfe" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Paseo La Plaza</div>`)[0];
+                popup_f5d5319b8faa322016cf24a4f52a2135.setContent(html_6cfd44ffa46efcbfe51c20aad4963cfe);
+            
+        
+
+        circle_marker_1cdb755d79ab21daa485243a546674c7.bindPopup(popup_f5d5319b8faa322016cf24a4f52a2135)
+        ;
+
+        
+    
+    
+            circle_marker_1cdb755d79ab21daa485243a546674c7.bindTooltip(
+                `<div>
+                     ✅ Paseo La Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69ecf81550090ff4e59b3a5cbdba56db = L.circleMarker(
+                [-34.62, -58.42],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_daff2b540df0db33f62f8473b9fc46d9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_caa7e5ec9846287133858f47913f090a = $(`<div id="html_caa7e5ec9846287133858f47913f090a" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Park 10</div>`)[0];
+                popup_daff2b540df0db33f62f8473b9fc46d9.setContent(html_caa7e5ec9846287133858f47913f090a);
+            
+        
+
+        circle_marker_69ecf81550090ff4e59b3a5cbdba56db.bindPopup(popup_daff2b540df0db33f62f8473b9fc46d9)
+        ;
+
+        
+    
+    
+            circle_marker_69ecf81550090ff4e59b3a5cbdba56db.bindTooltip(
+                `<div>
+                     ✅ Park 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8e2a2811fd51e959ccb331692942806 = L.circleMarker(
+                [-34.61, -58.43],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_4b68a542bcb19c5b07f90ed0e39c4624 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_53b0158ff1061978877a40d09453fd48 = $(`<div id="html_53b0158ff1061978877a40d09453fd48" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Nissan Neostar</div>`)[0];
+                popup_4b68a542bcb19c5b07f90ed0e39c4624.setContent(html_53b0158ff1061978877a40d09453fd48);
+            
+        
+
+        circle_marker_c8e2a2811fd51e959ccb331692942806.bindPopup(popup_4b68a542bcb19c5b07f90ed0e39c4624)
+        ;
+
+        
+    
+    
+            circle_marker_c8e2a2811fd51e959ccb331692942806.bindTooltip(
+                `<div>
+                     ✅ Nissan Neostar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4595db20a07370e9fa90ed4ee158730c = L.circleMarker(
+                [-34.61, -58.43],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_cf91ef1277bfd4fe167e4bbbf4610a5b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6ef36eff0f9e5db97f5eaa7209b13e7d = $(`<div id="html_6ef36eff0f9e5db97f5eaa7209b13e7d" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Punto 54</div>`)[0];
+                popup_cf91ef1277bfd4fe167e4bbbf4610a5b.setContent(html_6ef36eff0f9e5db97f5eaa7209b13e7d);
+            
+        
+
+        circle_marker_4595db20a07370e9fa90ed4ee158730c.bindPopup(popup_cf91ef1277bfd4fe167e4bbbf4610a5b)
+        ;
+
+        
+    
+    
+            circle_marker_4595db20a07370e9fa90ed4ee158730c.bindTooltip(
+                `<div>
+                     ✅ Punto 54
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b98b6661ab180c2fcb9fffe423ebd20 = L.circleMarker(
+                [-34.61, -58.36],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_f1ca761fe09e226c81411fe049af022b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_034c9206c0b4df6b46a6fad47cd5e100 = $(`<div id="html_034c9206c0b4df6b46a6fad47cd5e100" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Vanluz</div>`)[0];
+                popup_f1ca761fe09e226c81411fe049af022b.setContent(html_034c9206c0b4df6b46a6fad47cd5e100);
+            
+        
+
+        circle_marker_0b98b6661ab180c2fcb9fffe423ebd20.bindPopup(popup_f1ca761fe09e226c81411fe049af022b)
+        ;
+
+        
+    
+    
+            circle_marker_0b98b6661ab180c2fcb9fffe423ebd20.bindTooltip(
+                `<div>
+                     ✅ Vanluz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_42c2679652d2dc4ba78efbc15e1b26ef = L.circleMarker(
+                [-34.61, -58.36],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_e6c081e51c9e0fd965503838103c2e40 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b4e02c4f93ab74873346665c41077bc8 = $(`<div id="html_b4e02c4f93ab74873346665c41077bc8" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> BP Soluciones Eléctricas</div>`)[0];
+                popup_e6c081e51c9e0fd965503838103c2e40.setContent(html_b4e02c4f93ab74873346665c41077bc8);
+            
+        
+
+        circle_marker_42c2679652d2dc4ba78efbc15e1b26ef.bindPopup(popup_e6c081e51c9e0fd965503838103c2e40)
+        ;
+
+        
+    
+    
+            circle_marker_42c2679652d2dc4ba78efbc15e1b26ef.bindTooltip(
+                `<div>
+                     ✅ BP Soluciones Eléctricas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_652d3d71ea86579bf9137a140341cb69 = L.circleMarker(
+                [-34.85, -58.35],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_56b8a67aff44e6f2cad64eff97e02fdd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f82b2e48e1db35988deb7b815a46904 = $(`<div id="html_2f82b2e48e1db35988deb7b815a46904" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electropuerto</div>`)[0];
+                popup_56b8a67aff44e6f2cad64eff97e02fdd.setContent(html_2f82b2e48e1db35988deb7b815a46904);
+            
+        
+
+        circle_marker_652d3d71ea86579bf9137a140341cb69.bindPopup(popup_56b8a67aff44e6f2cad64eff97e02fdd)
+        ;
+
+        
+    
+    
+            circle_marker_652d3d71ea86579bf9137a140341cb69.bindTooltip(
+                `<div>
+                     ✅ Electropuerto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fa01a3e5e61301c8f6f4eefc88109a1 = L.circleMarker(
+                [-34.56, -58.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_e68d8d857454f00668d1dc018a257398 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8d987b30fe807a7b076539106f9df072 = $(`<div id="html_8d987b30fe807a7b076539106f9df072" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Camino de los Remeros</div>`)[0];
+                popup_e68d8d857454f00668d1dc018a257398.setContent(html_8d987b30fe807a7b076539106f9df072);
+            
+        
+
+        circle_marker_9fa01a3e5e61301c8f6f4eefc88109a1.bindPopup(popup_e68d8d857454f00668d1dc018a257398)
+        ;
+
+        
+    
+    
+            circle_marker_9fa01a3e5e61301c8f6f4eefc88109a1.bindTooltip(
+                `<div>
+                     ✅ Camino de los Remeros
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9642bb3d36da7764f7a174b391a18a9f = L.circleMarker(
+                [-34.56, -58.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_0b416f19f69c17e1b7f847551e7c4e83 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_65db334c613054c7e9fd65b4c83eb7b5 = $(`<div id="html_65db334c613054c7e9fd65b4c83eb7b5" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Tifón Water Planet</div>`)[0];
+                popup_0b416f19f69c17e1b7f847551e7c4e83.setContent(html_65db334c613054c7e9fd65b4c83eb7b5);
+            
+        
+
+        circle_marker_9642bb3d36da7764f7a174b391a18a9f.bindPopup(popup_0b416f19f69c17e1b7f847551e7c4e83)
+        ;
+
+        
+    
+    
+            circle_marker_9642bb3d36da7764f7a174b391a18a9f.bindTooltip(
+                `<div>
+                     ✅ Tifón Water Planet
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_100afecab7f03102a658081476b78a84 = L.circleMarker(
+                [-34.52, -58.72],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_bcddfd9b1ecddcfa7737bafe26ac671d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a7a4614e918f33cfd3811a7abf1f1078 = $(`<div id="html_a7a4614e918f33cfd3811a7abf1f1078" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Andreani Norlog</div>`)[0];
+                popup_bcddfd9b1ecddcfa7737bafe26ac671d.setContent(html_a7a4614e918f33cfd3811a7abf1f1078);
+            
+        
+
+        circle_marker_100afecab7f03102a658081476b78a84.bindPopup(popup_bcddfd9b1ecddcfa7737bafe26ac671d)
+        ;
+
+        
+    
+    
+            circle_marker_100afecab7f03102a658081476b78a84.bindTooltip(
+                `<div>
+                     ✅ Andreani Norlog
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08248993c3489f7c56e527fa67299ea5 = L.circleMarker(
+                [-34.52, -58.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_533a69ad3bbe4d024165a0a1f249c65f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_caabf3d07ee4189b5b7574828275a557 = $(`<div id="html_caabf3d07ee4189b5b7574828275a557" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Tamex 2</div>`)[0];
+                popup_533a69ad3bbe4d024165a0a1f249c65f.setContent(html_caabf3d07ee4189b5b7574828275a557);
+            
+        
+
+        circle_marker_08248993c3489f7c56e527fa67299ea5.bindPopup(popup_533a69ad3bbe4d024165a0a1f249c65f)
+        ;
+
+        
+    
+    
+            circle_marker_08248993c3489f7c56e527fa67299ea5.bindTooltip(
+                `<div>
+                     ✅ Tamex 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c18ebd76162ec50ff04103317b8cc2a5 = L.circleMarker(
+                [-34.47, -58.52],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_06697a8e0be3df8550cf30e595aa5220 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8aca7b32b4baf743e091cf3489d4ec35 = $(`<div id="html_8aca7b32b4baf743e091cf3489d4ec35" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Harmonie Chateau</div>`)[0];
+                popup_06697a8e0be3df8550cf30e595aa5220.setContent(html_8aca7b32b4baf743e091cf3489d4ec35);
+            
+        
+
+        circle_marker_c18ebd76162ec50ff04103317b8cc2a5.bindPopup(popup_06697a8e0be3df8550cf30e595aa5220)
+        ;
+
+        
+    
+    
+            circle_marker_c18ebd76162ec50ff04103317b8cc2a5.bindTooltip(
+                `<div>
+                     ✅ Harmonie Chateau
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24cb0c86769e201609f625fc07ea4a99 = L.circleMarker(
+                [-34.47, -58.52],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_bf6dc2e7cc9f563eb88e2bceb366a98e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c3c8a478cc31f80dcf3e30c34c382923 = $(`<div id="html_c3c8a478cc31f80dcf3e30c34c382923" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Centro Logístico ALKO</div>`)[0];
+                popup_bf6dc2e7cc9f563eb88e2bceb366a98e.setContent(html_c3c8a478cc31f80dcf3e30c34c382923);
+            
+        
+
+        circle_marker_24cb0c86769e201609f625fc07ea4a99.bindPopup(popup_bf6dc2e7cc9f563eb88e2bceb366a98e)
+        ;
+
+        
+    
+    
+            circle_marker_24cb0c86769e201609f625fc07ea4a99.bindTooltip(
+                `<div>
+                     ✅ Centro Logístico ALKO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6da29028900592ff048ebac6ff7051f3 = L.circleMarker(
+                [-34.47, -58.53],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_b9d5eaa17317bec80cc28d1d4606de39 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e77fb37c146ee5601aa401c9cd145a6f = $(`<div id="html_e77fb37c146ee5601aa401c9cd145a6f" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Oficinas ALKO</div>`)[0];
+                popup_b9d5eaa17317bec80cc28d1d4606de39.setContent(html_e77fb37c146ee5601aa401c9cd145a6f);
+            
+        
+
+        circle_marker_6da29028900592ff048ebac6ff7051f3.bindPopup(popup_b9d5eaa17317bec80cc28d1d4606de39)
+        ;
+
+        
+    
+    
+            circle_marker_6da29028900592ff048ebac6ff7051f3.bindTooltip(
+                `<div>
+                     ✅ Oficinas ALKO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7d8f88c102b92c11de0f1dc50a08640 = L.circleMarker(
+                [-34.35, -58.79],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_eee2cba56664030caeed1416ad2dda4d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7d373328e57d5dd40515b40724580b7c = $(`<div id="html_7d373328e57d5dd40515b40724580b7c" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Pelba Escobar</div>`)[0];
+                popup_eee2cba56664030caeed1416ad2dda4d.setContent(html_7d373328e57d5dd40515b40724580b7c);
+            
+        
+
+        circle_marker_a7d8f88c102b92c11de0f1dc50a08640.bindPopup(popup_eee2cba56664030caeed1416ad2dda4d)
+        ;
+
+        
+    
+    
+            circle_marker_a7d8f88c102b92c11de0f1dc50a08640.bindTooltip(
+                `<div>
+                     ✅ Pelba Escobar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c77555f9219fc2dde149b824e418d3f = L.circleMarker(
+                [-34.57, -59.11],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_283d0bce8d9df06b8181a158a883187b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_315a46691a6c38b37d99448ac5cb39f7 = $(`<div id="html_315a46691a6c38b37d99448ac5cb39f7" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electro Luján</div>`)[0];
+                popup_283d0bce8d9df06b8181a158a883187b.setContent(html_315a46691a6c38b37d99448ac5cb39f7);
+            
+        
+
+        circle_marker_1c77555f9219fc2dde149b824e418d3f.bindPopup(popup_283d0bce8d9df06b8181a158a883187b)
+        ;
+
+        
+    
+    
+            circle_marker_1c77555f9219fc2dde149b824e418d3f.bindTooltip(
+                `<div>
+                     ✅ Electro Luján
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4da84e4a5531591e8666d30a026dabbd = L.circleMarker(
+                [-34.46, -58.91],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_43c14c9ef315f796189f9041a12fd89b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6a14759a77bbcc96ff8d300a85b47297 = $(`<div id="html_6a14759a77bbcc96ff8d300a85b47297" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Pelba Pilar</div>`)[0];
+                popup_43c14c9ef315f796189f9041a12fd89b.setContent(html_6a14759a77bbcc96ff8d300a85b47297);
+            
+        
+
+        circle_marker_4da84e4a5531591e8666d30a026dabbd.bindPopup(popup_43c14c9ef315f796189f9041a12fd89b)
+        ;
+
+        
+    
+    
+            circle_marker_4da84e4a5531591e8666d30a026dabbd.bindTooltip(
+                `<div>
+                     ✅ Pelba Pilar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51baddf5ba3f2f87fe5fff55b64567ab = L.circleMarker(
+                [-34.76, -58.4],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_a278c796dcc9d117976035530bc9cf0f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_655f07e0d3979399f0b80d3ee2fc3216 = $(`<div id="html_655f07e0d3979399f0b80d3ee2fc3216" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electricidad Solari</div>`)[0];
+                popup_a278c796dcc9d117976035530bc9cf0f.setContent(html_655f07e0d3979399f0b80d3ee2fc3216);
+            
+        
+
+        circle_marker_51baddf5ba3f2f87fe5fff55b64567ab.bindPopup(popup_a278c796dcc9d117976035530bc9cf0f)
+        ;
+
+        
+    
+    
+            circle_marker_51baddf5ba3f2f87fe5fff55b64567ab.bindTooltip(
+                `<div>
+                     ✅ Electricidad Solari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51a95b9a668aad874f32a1a7749ebb1f = L.circleMarker(
+                [-34.92, -57.95],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_55f8a4430f7b7d190bf55aa0e426dbb1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e70600563b1a76447b09a91bbd176e88 = $(`<div id="html_e70600563b1a76447b09a91bbd176e88" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Magnani Soluciones</div>`)[0];
+                popup_55f8a4430f7b7d190bf55aa0e426dbb1.setContent(html_e70600563b1a76447b09a91bbd176e88);
+            
+        
+
+        circle_marker_51a95b9a668aad874f32a1a7749ebb1f.bindPopup(popup_55f8a4430f7b7d190bf55aa0e426dbb1)
+        ;
+
+        
+    
+    
+            circle_marker_51a95b9a668aad874f32a1a7749ebb1f.bindTooltip(
+                `<div>
+                     ✅ Magnani Soluciones
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3de305d051afdc3a4bee36d2947ad2f = L.circleMarker(
+                [-34.87, -58.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_fcbbd1aebe793af7eca7c7bc443b1f2d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7953db665ee31ad0ee7fe646b5e35989 = $(`<div id="html_7953db665ee31ad0ee7fe646b5e35989" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Fegime Latam</div>`)[0];
+                popup_fcbbd1aebe793af7eca7c7bc443b1f2d.setContent(html_7953db665ee31ad0ee7fe646b5e35989);
+            
+        
+
+        circle_marker_d3de305d051afdc3a4bee36d2947ad2f.bindPopup(popup_fcbbd1aebe793af7eca7c7bc443b1f2d)
+        ;
+
+        
+    
+    
+            circle_marker_d3de305d051afdc3a4bee36d2947ad2f.bindTooltip(
+                `<div>
+                     ✅ Fegime Latam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8160566d047e72defd5d14089e671336 = L.circleMarker(
+                [-34.85, -58.52],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_dc494c90d51075ab9cb209d3ee265cb0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9651f62bfc89b1c8a0afe103d5095787 = $(`<div id="html_9651f62bfc89b1c8a0afe103d5095787" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Trielec</div>`)[0];
+                popup_dc494c90d51075ab9cb209d3ee265cb0.setContent(html_9651f62bfc89b1c8a0afe103d5095787);
+            
+        
+
+        circle_marker_8160566d047e72defd5d14089e671336.bindPopup(popup_dc494c90d51075ab9cb209d3ee265cb0)
+        ;
+
+        
+    
+    
+            circle_marker_8160566d047e72defd5d14089e671336.bindTooltip(
+                `<div>
+                     ✅ Trielec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_35eaa431c8b9b1776571b5b6b265b31c = L.circleMarker(
+                [-34.92, -57.95],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_3b6d55f52e2f82d7b5fed2fe4364177f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dba81d6ff20e333e2a46a672b5f5ed92 = $(`<div id="html_dba81d6ff20e333e2a46a672b5f5ed92" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> JOMA Electricidad</div>`)[0];
+                popup_3b6d55f52e2f82d7b5fed2fe4364177f.setContent(html_dba81d6ff20e333e2a46a672b5f5ed92);
+            
+        
+
+        circle_marker_35eaa431c8b9b1776571b5b6b265b31c.bindPopup(popup_3b6d55f52e2f82d7b5fed2fe4364177f)
+        ;
+
+        
+    
+    
+            circle_marker_35eaa431c8b9b1776571b5b6b265b31c.bindTooltip(
+                `<div>
+                     ✅ JOMA Electricidad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28f53e561927b92ce717059a9e10eced = L.circleMarker(
+                [-34.85, -58.52],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_526cb86c91233cedf28bad8ba8d2edd1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_729f7ec097b2754a773c2b0ae65efde4 = $(`<div id="html_729f7ec097b2754a773c2b0ae65efde4" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Richetta Schneider</div>`)[0];
+                popup_526cb86c91233cedf28bad8ba8d2edd1.setContent(html_729f7ec097b2754a773c2b0ae65efde4);
+            
+        
+
+        circle_marker_28f53e561927b92ce717059a9e10eced.bindPopup(popup_526cb86c91233cedf28bad8ba8d2edd1)
+        ;
+
+        
+    
+    
+            circle_marker_28f53e561927b92ce717059a9e10eced.bindTooltip(
+                `<div>
+                     ✅ Richetta Schneider
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e44927f6c8ff30858332875a49e851d = L.circleMarker(
+                [-34.65, -58.62],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_5f25398461951fdbe4977dece4cb9fcc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6ed2d5037ea71a16830e270c74e0fb66 = $(`<div id="html_6ed2d5037ea71a16830e270c74e0fb66" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Pem</div>`)[0];
+                popup_5f25398461951fdbe4977dece4cb9fcc.setContent(html_6ed2d5037ea71a16830e270c74e0fb66);
+            
+        
+
+        circle_marker_8e44927f6c8ff30858332875a49e851d.bindPopup(popup_5f25398461951fdbe4977dece4cb9fcc)
+        ;
+
+        
+    
+    
+            circle_marker_8e44927f6c8ff30858332875a49e851d.bindTooltip(
+                `<div>
+                     ✅ Pem
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d86237a5f789b6a79399c1594b45e8e7 = L.circleMarker(
+                [-34.66, -58.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_7b5958919f1b296112b5e815c1325b85 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c1238c0e5a2dd0951622a6d827366c5e = $(`<div id="html_c1238c0e5a2dd0951622a6d827366c5e" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Nuevo Sur</div>`)[0];
+                popup_7b5958919f1b296112b5e815c1325b85.setContent(html_c1238c0e5a2dd0951622a6d827366c5e);
+            
+        
+
+        circle_marker_d86237a5f789b6a79399c1594b45e8e7.bindPopup(popup_7b5958919f1b296112b5e815c1325b85)
+        ;
+
+        
+    
+    
+            circle_marker_d86237a5f789b6a79399c1594b45e8e7.bindTooltip(
+                `<div>
+                     ✅ Nuevo Sur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e32d1cf3e0995f5a54b417639f3fbcd6 = L.circleMarker(
+                [-34.66, -58.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_0da3748a232e52fb3bf35fada6805901 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_01d2e30097535511728916a9cf163857 = $(`<div id="html_01d2e30097535511728916a9cf163857" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Ciardi Hnos Main</div>`)[0];
+                popup_0da3748a232e52fb3bf35fada6805901.setContent(html_01d2e30097535511728916a9cf163857);
+            
+        
+
+        circle_marker_e32d1cf3e0995f5a54b417639f3fbcd6.bindPopup(popup_0da3748a232e52fb3bf35fada6805901)
+        ;
+
+        
+    
+    
+            circle_marker_e32d1cf3e0995f5a54b417639f3fbcd6.bindTooltip(
+                `<div>
+                     ✅ Ciardi Hnos Main
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9043c05efce76d7bc15fec112b6ef07c = L.circleMarker(
+                [-36.31, -57.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_df2838cd88b6d037884b03a6ce86e180 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fe94e9d15f31f96656abb1e2b28fb9f0 = $(`<div id="html_fe94e9d15f31f96656abb1e2b28fb9f0" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> YPF Dolores</div>`)[0];
+                popup_df2838cd88b6d037884b03a6ce86e180.setContent(html_fe94e9d15f31f96656abb1e2b28fb9f0);
+            
+        
+
+        circle_marker_9043c05efce76d7bc15fec112b6ef07c.bindPopup(popup_df2838cd88b6d037884b03a6ce86e180)
+        ;
+
+        
+    
+    
+            circle_marker_9043c05efce76d7bc15fec112b6ef07c.bindTooltip(
+                `<div>
+                     ✅ YPF Dolores
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b49695c43eaa2957d6c2d357bac625c = L.circleMarker(
+                [-37.84, -58.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_b1bd797a0931737055056ce22be78ebb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c3d9e7a90ab011df51c625ba362cf0eb = $(`<div id="html_c3d9e7a90ab011df51c625ba362cf0eb" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Ciardi Hnos Balcarce</div>`)[0];
+                popup_b1bd797a0931737055056ce22be78ebb.setContent(html_c3d9e7a90ab011df51c625ba362cf0eb);
+            
+        
+
+        circle_marker_1b49695c43eaa2957d6c2d357bac625c.bindPopup(popup_b1bd797a0931737055056ce22be78ebb)
+        ;
+
+        
+    
+    
+            circle_marker_1b49695c43eaa2957d6c2d357bac625c.bindTooltip(
+                `<div>
+                     ✅ Ciardi Hnos Balcarce
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ab32014374ea771ae8260a7dda972b6 = L.circleMarker(
+                [-37.11, -56.86],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_9ebc220a68828d2fbcd3c5abb5545425 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cd5cf08a4002e1294ee54697a5881dcf = $(`<div id="html_cd5cf08a4002e1294ee54697a5881dcf" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Ciardi Hnos La Costa</div>`)[0];
+                popup_9ebc220a68828d2fbcd3c5abb5545425.setContent(html_cd5cf08a4002e1294ee54697a5881dcf);
+            
+        
+
+        circle_marker_6ab32014374ea771ae8260a7dda972b6.bindPopup(popup_9ebc220a68828d2fbcd3c5abb5545425)
+        ;
+
+        
+    
+    
+            circle_marker_6ab32014374ea771ae8260a7dda972b6.bindTooltip(
+                `<div>
+                     ✅ Ciardi Hnos La Costa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca418bfe614c6f29f11618948ec82c46 = L.circleMarker(
+                [-36.88, -60.02],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_98a48bd123701dd6740978b9135ab2c5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_51360b01389448bc6f7f75dfceee145c = $(`<div id="html_51360b01389448bc6f7f75dfceee145c" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electricidad Alsina</div>`)[0];
+                popup_98a48bd123701dd6740978b9135ab2c5.setContent(html_51360b01389448bc6f7f75dfceee145c);
+            
+        
+
+        circle_marker_ca418bfe614c6f29f11618948ec82c46.bindPopup(popup_98a48bd123701dd6740978b9135ab2c5)
+        ;
+
+        
+    
+    
+            circle_marker_ca418bfe614c6f29f11618948ec82c46.bindTooltip(
+                `<div>
+                     ✅ Electricidad Alsina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7417ede03a181dfe8e0eef49f3bb247 = L.circleMarker(
+                [-38.72, -62.27],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_0cda8302c530cd95b3de1daed1bb22da = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_770f4c5ce5e87b532d1c867feabe154e = $(`<div id="html_770f4c5ce5e87b532d1c867feabe154e" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electricidad Maza</div>`)[0];
+                popup_0cda8302c530cd95b3de1daed1bb22da.setContent(html_770f4c5ce5e87b532d1c867feabe154e);
+            
+        
+
+        circle_marker_e7417ede03a181dfe8e0eef49f3bb247.bindPopup(popup_0cda8302c530cd95b3de1daed1bb22da)
+        ;
+
+        
+    
+    
+            circle_marker_e7417ede03a181dfe8e0eef49f3bb247.bindTooltip(
+                `<div>
+                     ✅ Electricidad Maza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d424ff93ea7701bba1bf01270c535a4 = L.circleMarker(
+                [-38.72, -62.28],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_556480ecc05d50e3d473331966caebca = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_952c509d4fe693edad18c3c710adb472 = $(`<div id="html_952c509d4fe693edad18c3c710adb472" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Melecsur</div>`)[0];
+                popup_556480ecc05d50e3d473331966caebca.setContent(html_952c509d4fe693edad18c3c710adb472);
+            
+        
+
+        circle_marker_1d424ff93ea7701bba1bf01270c535a4.bindPopup(popup_556480ecc05d50e3d473331966caebca)
+        ;
+
+        
+    
+    
+            circle_marker_1d424ff93ea7701bba1bf01270c535a4.bindTooltip(
+                `<div>
+                     ✅ Melecsur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd6dc24117cca1eb041a442e23ac3ded = L.circleMarker(
+                [-37.32, -59.13],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_991330f76eb1ef96e700a552d67f6435 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5bff5cabe71012f28992730cdb24c8bc = $(`<div id="html_5bff5cabe71012f28992730cdb24c8bc" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Tandil</div>`)[0];
+                popup_991330f76eb1ef96e700a552d67f6435.setContent(html_5bff5cabe71012f28992730cdb24c8bc);
+            
+        
+
+        circle_marker_bd6dc24117cca1eb041a442e23ac3ded.bindPopup(popup_991330f76eb1ef96e700a552d67f6435)
+        ;
+
+        
+    
+    
+            circle_marker_bd6dc24117cca1eb041a442e23ac3ded.bindTooltip(
+                `<div>
+                     ✅ Tandil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ba61d3ab194487cc48b9b7c22232fc3 = L.circleMarker(
+                [-38.0, -57.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_1723d1bad89235e60dddf99121815c10 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_841c48953285f8eb2958827b08877598 = $(`<div id="html_841c48953285f8eb2958827b08877598" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Mar del Plata 1</div>`)[0];
+                popup_1723d1bad89235e60dddf99121815c10.setContent(html_841c48953285f8eb2958827b08877598);
+            
+        
+
+        circle_marker_5ba61d3ab194487cc48b9b7c22232fc3.bindPopup(popup_1723d1bad89235e60dddf99121815c10)
+        ;
+
+        
+    
+    
+            circle_marker_5ba61d3ab194487cc48b9b7c22232fc3.bindTooltip(
+                `<div>
+                     ✅ Mar del Plata 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53380b7be6c6a6c8ac61bc3595c14282 = L.circleMarker(
+                [-38.02, -57.54],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_f6444156e1668ec69eb9156ad1c8107d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b3611e4d169cd0264f019f7917ea885b = $(`<div id="html_b3611e4d169cd0264f019f7917ea885b" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Mar del Plata 2</div>`)[0];
+                popup_f6444156e1668ec69eb9156ad1c8107d.setContent(html_b3611e4d169cd0264f019f7917ea885b);
+            
+        
+
+        circle_marker_53380b7be6c6a6c8ac61bc3595c14282.bindPopup(popup_f6444156e1668ec69eb9156ad1c8107d)
+        ;
+
+        
+    
+    
+            circle_marker_53380b7be6c6a6c8ac61bc3595c14282.bindTooltip(
+                `<div>
+                     ✅ Mar del Plata 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d6f73a6d78ed20bc930c6562497261f = L.circleMarker(
+                [-38.04, -57.53],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_d946f6775cc4491a8a63a0af9b9bb343 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f0bcc7430159a54ff19c09cf62799224 = $(`<div id="html_f0bcc7430159a54ff19c09cf62799224" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Mar del Plata 3</div>`)[0];
+                popup_d946f6775cc4491a8a63a0af9b9bb343.setContent(html_f0bcc7430159a54ff19c09cf62799224);
+            
+        
+
+        circle_marker_4d6f73a6d78ed20bc930c6562497261f.bindPopup(popup_d946f6775cc4491a8a63a0af9b9bb343)
+        ;
+
+        
+    
+    
+            circle_marker_4d6f73a6d78ed20bc930c6562497261f.bindTooltip(
+                `<div>
+                     ✅ Mar del Plata 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a11a365ba7dfac9a6369b89c3f1fb90 = L.circleMarker(
+                [-35.45, -60.88],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_00e253c7a4a03683a1f347b1696803de = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2e62d480207ab4a8674b9d9f6224d4cc = $(`<div id="html_2e62d480207ab4a8674b9d9f6224d4cc" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> 9 de Julio</div>`)[0];
+                popup_00e253c7a4a03683a1f347b1696803de.setContent(html_2e62d480207ab4a8674b9d9f6224d4cc);
+            
+        
+
+        circle_marker_1a11a365ba7dfac9a6369b89c3f1fb90.bindPopup(popup_00e253c7a4a03683a1f347b1696803de)
+        ;
+
+        
+    
+    
+            circle_marker_1a11a365ba7dfac9a6369b89c3f1fb90.bindTooltip(
+                `<div>
+                     ✅ 9 de Julio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa5e8e3e1c4171585e2115ed7e945066 = L.circleMarker(
+                [-36.62, -64.29],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_3f5d798c68de777545a0cc8648bad387 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_10a73d90c32e65ad7e0766de33feeec0 = $(`<div id="html_10a73d90c32e65ad7e0766de33feeec0" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Santa Rosa La Pampa</div>`)[0];
+                popup_3f5d798c68de777545a0cc8648bad387.setContent(html_10a73d90c32e65ad7e0766de33feeec0);
+            
+        
+
+        circle_marker_aa5e8e3e1c4171585e2115ed7e945066.bindPopup(popup_3f5d798c68de777545a0cc8648bad387)
+        ;
+
+        
+    
+    
+            circle_marker_aa5e8e3e1c4171585e2115ed7e945066.bindTooltip(
+                `<div>
+                     ✅ Santa Rosa La Pampa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_212607d7708cc63fbc7336d8cf0b9912 = L.circleMarker(
+                [-35.65, -63.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_95950638b26eb0ca9559eca2874f3e47 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ea604287ab5d23270b68f89736fbc19a = $(`<div id="html_ea604287ab5d23270b68f89736fbc19a" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> General Pico</div>`)[0];
+                popup_95950638b26eb0ca9559eca2874f3e47.setContent(html_ea604287ab5d23270b68f89736fbc19a);
+            
+        
+
+        circle_marker_212607d7708cc63fbc7336d8cf0b9912.bindPopup(popup_95950638b26eb0ca9559eca2874f3e47)
+        ;
+
+        
+    
+    
+            circle_marker_212607d7708cc63fbc7336d8cf0b9912.bindTooltip(
+                `<div>
+                     ✅ General Pico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6dfd76e1043e4349251fd1b20496d323 = L.circleMarker(
+                [-32.89, -68.84],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_fecccbf5e76810cfb058576f4ae64043 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_79ed4c3a89b64c09ba92dcdb3b34f338 = $(`<div id="html_79ed4c3a89b64c09ba92dcdb3b34f338" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electro 2001</div>`)[0];
+                popup_fecccbf5e76810cfb058576f4ae64043.setContent(html_79ed4c3a89b64c09ba92dcdb3b34f338);
+            
+        
+
+        circle_marker_6dfd76e1043e4349251fd1b20496d323.bindPopup(popup_fecccbf5e76810cfb058576f4ae64043)
+        ;
+
+        
+    
+    
+            circle_marker_6dfd76e1043e4349251fd1b20496d323.bindTooltip(
+                `<div>
+                     ✅ Electro 2001
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cee65a1118c837b009836a3e5a5b796d = L.circleMarker(
+                [-32.9, -68.83],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_db66f769b0137102b4566b52864000ec = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6cdb0d7f4f73fb68f434754ab019c6e9 = $(`<div id="html_6cdb0d7f4f73fb68f434754ab019c6e9" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Electro Dos</div>`)[0];
+                popup_db66f769b0137102b4566b52864000ec.setContent(html_6cdb0d7f4f73fb68f434754ab019c6e9);
+            
+        
+
+        circle_marker_cee65a1118c837b009836a3e5a5b796d.bindPopup(popup_db66f769b0137102b4566b52864000ec)
+        ;
+
+        
+    
+    
+            circle_marker_cee65a1118c837b009836a3e5a5b796d.bindTooltip(
+                `<div>
+                     ✅ Electro Dos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7370c249f27c98a596b76c162363c6a1 = L.circleMarker(
+                [-32.89, -68.84],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_eabe1d8d2e97367f9588637932909597 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_85690b2e5d20776c79e982cbd2f64cb1 = $(`<div id="html_85690b2e5d20776c79e982cbd2f64cb1" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Centro Comercial Gomez Pardo</div>`)[0];
+                popup_eabe1d8d2e97367f9588637932909597.setContent(html_85690b2e5d20776c79e982cbd2f64cb1);
+            
+        
+
+        circle_marker_7370c249f27c98a596b76c162363c6a1.bindPopup(popup_eabe1d8d2e97367f9588637932909597)
+        ;
+
+        
+    
+    
+            circle_marker_7370c249f27c98a596b76c162363c6a1.bindTooltip(
+                `<div>
+                     ✅ Centro Comercial Gomez Pardo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8458684823f81e24dc04131830265ff7 = L.circleMarker(
+                [-32.89, -68.83],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_471ccb22af9663a2a5a25b3ac3375b8c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6258355a27dbdad67156ab3d1b03cdf8 = $(`<div id="html_6258355a27dbdad67156ab3d1b03cdf8" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Terrazas del Portezuelo</div>`)[0];
+                popup_471ccb22af9663a2a5a25b3ac3375b8c.setContent(html_6258355a27dbdad67156ab3d1b03cdf8);
+            
+        
+
+        circle_marker_8458684823f81e24dc04131830265ff7.bindPopup(popup_471ccb22af9663a2a5a25b3ac3375b8c)
+        ;
+
+        
+    
+    
+            circle_marker_8458684823f81e24dc04131830265ff7.bindTooltip(
+                `<div>
+                     ✅ Terrazas del Portezuelo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0f0464ebd11c27af0c74fb562876aa2 = L.circleMarker(
+                [-34.62, -68.33],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_66b806a17ff9b344314f75fbbf469445 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_69369fc3cbee668fcc51f2a1dd97d1a4 = $(`<div id="html_69369fc3cbee668fcc51f2a1dd97d1a4" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> San Rafael Mendoza</div>`)[0];
+                popup_66b806a17ff9b344314f75fbbf469445.setContent(html_69369fc3cbee668fcc51f2a1dd97d1a4);
+            
+        
+
+        circle_marker_f0f0464ebd11c27af0c74fb562876aa2.bindPopup(popup_66b806a17ff9b344314f75fbbf469445)
+        ;
+
+        
+    
+    
+            circle_marker_f0f0464ebd11c27af0c74fb562876aa2.bindTooltip(
+                `<div>
+                     ✅ San Rafael Mendoza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c974f278c581310f502d8e0b7e0ce62 = L.circleMarker(
+                [-33.3, -66.34],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_3da2552b030857bf6e957830000697e6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_22447c78880731020c8070efdd72247c = $(`<div id="html_22447c78880731020c8070efdd72247c" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Equipel San Luis</div>`)[0];
+                popup_3da2552b030857bf6e957830000697e6.setContent(html_22447c78880731020c8070efdd72247c);
+            
+        
+
+        circle_marker_4c974f278c581310f502d8e0b7e0ce62.bindPopup(popup_3da2552b030857bf6e957830000697e6)
+        ;
+
+        
+    
+    
+            circle_marker_4c974f278c581310f502d8e0b7e0ce62.bindTooltip(
+                `<div>
+                     ✅ Equipel San Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62c37b272e01bdc308e79cb9c6a8cf71 = L.circleMarker(
+                [-33.3, -66.33],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_2377063047b84591aa9420f17064c1c5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4361ef194c3b1dc7971215caa0030e8e = $(`<div id="html_4361ef194c3b1dc7971215caa0030e8e" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Nuevo Sur San Luis</div>`)[0];
+                popup_2377063047b84591aa9420f17064c1c5.setContent(html_4361ef194c3b1dc7971215caa0030e8e);
+            
+        
+
+        circle_marker_62c37b272e01bdc308e79cb9c6a8cf71.bindPopup(popup_2377063047b84591aa9420f17064c1c5)
+        ;
+
+        
+    
+    
+            circle_marker_62c37b272e01bdc308e79cb9c6a8cf71.bindTooltip(
+                `<div>
+                     ✅ Nuevo Sur San Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73c1d89aba4e5d930ed8023a3d3b2dd5 = L.circleMarker(
+                [-33.67, -65.46],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_674d7d5023bab9a6821f7eba390eb763 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_adf8f9d7ff7585e94b8b970b1512383d = $(`<div id="html_adf8f9d7ff7585e94b8b970b1512383d" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> FG Industrial</div>`)[0];
+                popup_674d7d5023bab9a6821f7eba390eb763.setContent(html_adf8f9d7ff7585e94b8b970b1512383d);
+            
+        
+
+        circle_marker_73c1d89aba4e5d930ed8023a3d3b2dd5.bindPopup(popup_674d7d5023bab9a6821f7eba390eb763)
+        ;
+
+        
+    
+    
+            circle_marker_73c1d89aba4e5d930ed8023a3d3b2dd5.bindTooltip(
+                `<div>
+                     ✅ FG Industrial
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe180f696d615f1460e9bfe9380245d6 = L.circleMarker(
+                [-31.53, -68.53],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_64b404d1ac53d67ea69351502eb416ff = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_63486a3a2f4bda54e04038d1e36d95dc = $(`<div id="html_63486a3a2f4bda54e04038d1e36d95dc" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> San Juan Capital</div>`)[0];
+                popup_64b404d1ac53d67ea69351502eb416ff.setContent(html_63486a3a2f4bda54e04038d1e36d95dc);
+            
+        
+
+        circle_marker_fe180f696d615f1460e9bfe9380245d6.bindPopup(popup_64b404d1ac53d67ea69351502eb416ff)
+        ;
+
+        
+    
+    
+            circle_marker_fe180f696d615f1460e9bfe9380245d6.bindTooltip(
+                `<div>
+                     ✅ San Juan Capital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_886d7f332f1d07e76da69fc659d4bb71 = L.circleMarker(
+                [-24.79, -65.41],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_0279c443b156ad8067a0dd5731c50b02 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_47426d937d1232c160801b46aecd7edf = $(`<div id="html_47426d937d1232c160801b46aecd7edf" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> BP Salta</div>`)[0];
+                popup_0279c443b156ad8067a0dd5731c50b02.setContent(html_47426d937d1232c160801b46aecd7edf);
+            
+        
+
+        circle_marker_886d7f332f1d07e76da69fc659d4bb71.bindPopup(popup_0279c443b156ad8067a0dd5731c50b02)
+        ;
+
+        
+    
+    
+            circle_marker_886d7f332f1d07e76da69fc659d4bb71.bindTooltip(
+                `<div>
+                     ✅ BP Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f746b56e7e1cfec0361c5c7f865e95d6 = L.circleMarker(
+                [-26.81, -65.29],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_1c151296f0631f38d5d796f519b76ba9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2998812a5c0fe530e43998c870e6fe85 = $(`<div id="html_2998812a5c0fe530e43998c870e6fe85" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> BP Yerba Buena</div>`)[0];
+                popup_1c151296f0631f38d5d796f519b76ba9.setContent(html_2998812a5c0fe530e43998c870e6fe85);
+            
+        
+
+        circle_marker_f746b56e7e1cfec0361c5c7f865e95d6.bindPopup(popup_1c151296f0631f38d5d796f519b76ba9)
+        ;
+
+        
+    
+    
+            circle_marker_f746b56e7e1cfec0361c5c7f865e95d6.bindTooltip(
+                `<div>
+                     ✅ BP Yerba Buena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d6bcab7a7f9a2d53d59a22b0b866ad4 = L.circleMarker(
+                [-27.45, -65.28],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_b43ee028a3beff1f6cc6e9e29377789c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_72a40bbecdd727ef9ff84d1292fba1de = $(`<div id="html_72a40bbecdd727ef9ff84d1292fba1de" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Parque Mitre Salta</div>`)[0];
+                popup_b43ee028a3beff1f6cc6e9e29377789c.setContent(html_72a40bbecdd727ef9ff84d1292fba1de);
+            
+        
+
+        circle_marker_1d6bcab7a7f9a2d53d59a22b0b866ad4.bindPopup(popup_b43ee028a3beff1f6cc6e9e29377789c)
+        ;
+
+        
+    
+    
+            circle_marker_1d6bcab7a7f9a2d53d59a22b0b866ad4.bindTooltip(
+                `<div>
+                     ✅ Parque Mitre Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c88784531446433d0db79d5eaf24bdeb = L.circleMarker(
+                [-28.47, -65.78],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_3f82f3616b64d452f9a76bd3145aee2f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8c5b354f65f14504af557a38f762de58 = $(`<div id="html_8c5b354f65f14504af557a38f762de58" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Matelec Catamarca</div>`)[0];
+                popup_3f82f3616b64d452f9a76bd3145aee2f.setContent(html_8c5b354f65f14504af557a38f762de58);
+            
+        
+
+        circle_marker_c88784531446433d0db79d5eaf24bdeb.bindPopup(popup_3f82f3616b64d452f9a76bd3145aee2f)
+        ;
+
+        
+    
+    
+            circle_marker_c88784531446433d0db79d5eaf24bdeb.bindTooltip(
+                `<div>
+                     ✅ Matelec Catamarca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8364170c6a8f9704d1a6c540c46aff82 = L.circleMarker(
+                [-38.92, -68.09],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_384092ff7c45247633f530c14f70e3d3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fbabc72a879fbd0084c9dd7383bdf424 = $(`<div id="html_fbabc72a879fbd0084c9dd7383bdf424" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Neuquén Scame 1</div>`)[0];
+                popup_384092ff7c45247633f530c14f70e3d3.setContent(html_fbabc72a879fbd0084c9dd7383bdf424);
+            
+        
+
+        circle_marker_8364170c6a8f9704d1a6c540c46aff82.bindPopup(popup_384092ff7c45247633f530c14f70e3d3)
+        ;
+
+        
+    
+    
+            circle_marker_8364170c6a8f9704d1a6c540c46aff82.bindTooltip(
+                `<div>
+                     ✅ Neuquén Scame 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e67ff965b071ac3e538aa2f81027d4a5 = L.circleMarker(
+                [-38.95, -68.07],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_ff1fea96213058abe6b535c2437f668b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2cbdb4c7aa4a8eaeea8b572c2c2bf069 = $(`<div id="html_2cbdb4c7aa4a8eaeea8b572c2c2bf069" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Neuquén Scame 2</div>`)[0];
+                popup_ff1fea96213058abe6b535c2437f668b.setContent(html_2cbdb4c7aa4a8eaeea8b572c2c2bf069);
+            
+        
+
+        circle_marker_e67ff965b071ac3e538aa2f81027d4a5.bindPopup(popup_ff1fea96213058abe6b535c2437f668b)
+        ;
+
+        
+    
+    
+            circle_marker_e67ff965b071ac3e538aa2f81027d4a5.bindTooltip(
+                `<div>
+                     ✅ Neuquén Scame 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f889899c39b84049c7028bf9153a4472 = L.circleMarker(
+                [-38.97, -68.06],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_b0be6c4dc2e01a21a359cb45571748a7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8fcdcd4ba0999a7b7137a75e41c5ac72 = $(`<div id="html_8fcdcd4ba0999a7b7137a75e41c5ac72" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Neuquén Scame 3</div>`)[0];
+                popup_b0be6c4dc2e01a21a359cb45571748a7.setContent(html_8fcdcd4ba0999a7b7137a75e41c5ac72);
+            
+        
+
+        circle_marker_f889899c39b84049c7028bf9153a4472.bindPopup(popup_b0be6c4dc2e01a21a359cb45571748a7)
+        ;
+
+        
+    
+    
+            circle_marker_f889899c39b84049c7028bf9153a4472.bindTooltip(
+                `<div>
+                     ✅ Neuquén Scame 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_63c739b1dc2767d4ac6798f376d2376a = L.circleMarker(
+                [-45.86, -67.49],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_b0c8ad869d8605e477628c7b7e00431a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d99dd63da3f3c5b1e70a014088f98987 = $(`<div id="html_d99dd63da3f3c5b1e70a014088f98987" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Comodoro Conocimiento</div>`)[0];
+                popup_b0c8ad869d8605e477628c7b7e00431a.setContent(html_d99dd63da3f3c5b1e70a014088f98987);
+            
+        
+
+        circle_marker_63c739b1dc2767d4ac6798f376d2376a.bindPopup(popup_b0c8ad869d8605e477628c7b7e00431a)
+        ;
+
+        
+    
+    
+            circle_marker_63c739b1dc2767d4ac6798f376d2376a.bindTooltip(
+                `<div>
+                     ✅ Comodoro Conocimiento
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68aecf617155c0f5e65d773c173b9740 = L.circleMarker(
+                [-42.77, -65.04],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_8d20085b04fa62263bd1ab9c49ba9870 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_74e907914c1fdeb9e87312fcb877a265 = $(`<div id="html_74e907914c1fdeb9e87312fcb877a265" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Puerto Madryn</div>`)[0];
+                popup_8d20085b04fa62263bd1ab9c49ba9870.setContent(html_74e907914c1fdeb9e87312fcb877a265);
+            
+        
+
+        circle_marker_68aecf617155c0f5e65d773c173b9740.bindPopup(popup_8d20085b04fa62263bd1ab9c49ba9870)
+        ;
+
+        
+    
+    
+            circle_marker_68aecf617155c0f5e65d773c173b9740.bindTooltip(
+                `<div>
+                     ✅ Puerto Madryn
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6db498612e62947770172548cd452048 = L.circleMarker(
+                [-33.01, -58.52],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+        var popup_056ddd148849abd1b87d825f6b34ac6f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5d5c97227fb913ac13bf53e2cc0e4f0e = $(`<div id="html_5d5c97227fb913ac13bf53e2cc0e4f0e" style="width: 100.0%; height: 100.0%;"><b>Existing:</b> Cooperativa Eléctrica Gualeguaychú</div>`)[0];
+                popup_056ddd148849abd1b87d825f6b34ac6f.setContent(html_5d5c97227fb913ac13bf53e2cc0e4f0e);
+            
+        
+
+        circle_marker_6db498612e62947770172548cd452048.bindPopup(popup_056ddd148849abd1b87d825f6b34ac6f)
+        ;
+
+        
+    
+    
+            circle_marker_6db498612e62947770172548cd452048.bindTooltip(
+                `<div>
+                     ✅ Cooperativa Eléctrica Gualeguaychú
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5c93262f2aadd3b25c224059dd123581 = L.polyline(
+                [[-34.61, -58.38], [-32.95, -60.64], [-32.41, -63.24], [-31.42, -64.18], [-29.41, -66.85], [-27.79, -64.26], [-26.81, -65.21], [-24.79, -65.41]],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2A9D8F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_5c93262f2aadd3b25c224059dd123581.bindTooltip(
+                `<div>
+                     RN 9 — Buenos Aires → Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4376edd8a1925301dc116f5b678a20cf = L.circleMarker(
+                [-34.61, -58.38],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_4376edd8a1925301dc116f5b678a20cf.bindTooltip(
+                `<div>
+                     Buenos Aires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c6deaee9abd9f6a9b1fa69c4248126a5 = L.circleMarker(
+                [-32.95, -60.64],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_c6deaee9abd9f6a9b1fa69c4248126a5.bindTooltip(
+                `<div>
+                     Rosario
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5aa2789fb55bd9fcca9c118fcc0f8647 = L.circleMarker(
+                [-32.41, -63.24],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_5aa2789fb55bd9fcca9c118fcc0f8647.bindTooltip(
+                `<div>
+                     Villa María
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8ba6c63ce3fba880f14bfc1f8856b6f = L.circleMarker(
+                [-31.42, -64.18],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_a8ba6c63ce3fba880f14bfc1f8856b6f.bindTooltip(
+                `<div>
+                     Córdoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37d4091b250472d40064a06941e204db = L.circleMarker(
+                [-29.41, -66.85],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_37d4091b250472d40064a06941e204db.bindTooltip(
+                `<div>
+                     La Rioja
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4adf1d94eea611936826832091d3d0bb = L.circleMarker(
+                [-27.79, -64.26],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_4adf1d94eea611936826832091d3d0bb.bindTooltip(
+                `<div>
+                     Santiago Estero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55bed72f944bdfecc6d97062ae040eb3 = L.circleMarker(
+                [-26.81, -65.21],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_55bed72f944bdfecc6d97062ae040eb3.bindTooltip(
+                `<div>
+                     Tucumán
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4de96c6167841a6358479b80ee7bd4d = L.circleMarker(
+                [-24.79, -65.41],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_c4de96c6167841a6358479b80ee7bd4d.bindTooltip(
+                `<div>
+                     Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_87c959fd82248781bf7f2b9fbf0ca79a = L.polyline(
+                [[-34.61, -58.38], [-34.57, -59.11], [-33.3, -66.34], [-32.89, -68.84]],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#457B9D", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_87c959fd82248781bf7f2b9fbf0ca79a.bindTooltip(
+                `<div>
+                     RN 7 — Buenos Aires → Mendoza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32b5c7711049762964cd76714bd5b47c = L.circleMarker(
+                [-34.61, -58.38],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_32b5c7711049762964cd76714bd5b47c.bindTooltip(
+                `<div>
+                     Buenos Aires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89220ad4a0c7c91205d5a3869568dae2 = L.circleMarker(
+                [-34.57, -59.11],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_89220ad4a0c7c91205d5a3869568dae2.bindTooltip(
+                `<div>
+                     Luján
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05be543329dd2d99b1d4ec93e3836ff5 = L.circleMarker(
+                [-33.3, -66.34],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_05be543329dd2d99b1d4ec93e3836ff5.bindTooltip(
+                `<div>
+                     San Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8b7461d0d29a0cdc4a6b2e981b0d2cb = L.circleMarker(
+                [-32.89, -68.84],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_a8b7461d0d29a0cdc4a6b2e981b0d2cb.bindTooltip(
+                `<div>
+                     Mendoza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_116d2dcadc26a00868362994eb567c01 = L.polyline(
+                [[-34.61, -58.38], [-38.72, -62.27], [-40.81, -62.99], [-42.77, -65.04], [-45.86, -67.49], [-46.44, -67.52], [-51.62, -69.21], [-54.8, -68.3]],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#E63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_116d2dcadc26a00868362994eb567c01.bindTooltip(
+                `<div>
+                     RN 3 — Buenos Aires → Ushuaia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98d980ac393065567b68e133e50f9861 = L.circleMarker(
+                [-34.61, -58.38],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_98d980ac393065567b68e133e50f9861.bindTooltip(
+                `<div>
+                     Buenos Aires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d69ef7a9c8d22ad8c8c89eba4842c6d1 = L.circleMarker(
+                [-38.72, -62.27],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_d69ef7a9c8d22ad8c8c89eba4842c6d1.bindTooltip(
+                `<div>
+                     Bahía Blanca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74a8fc0d659bf89d72e6a645c9fac628 = L.circleMarker(
+                [-40.81, -62.99],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_74a8fc0d659bf89d72e6a645c9fac628.bindTooltip(
+                `<div>
+                     Viedma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e4cb8bfdc53e2dd79ebc75d1aad839f = L.circleMarker(
+                [-42.77, -65.04],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_1e4cb8bfdc53e2dd79ebc75d1aad839f.bindTooltip(
+                `<div>
+                     Puerto Madryn
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1fbdbb322e48444884e09f590a63cea = L.circleMarker(
+                [-45.86, -67.49],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_d1fbdbb322e48444884e09f590a63cea.bindTooltip(
+                `<div>
+                     Comodoro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bbd1fef0ae590cc1156141cfdcab9c47 = L.circleMarker(
+                [-46.44, -67.52],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_bbd1fef0ae590cc1156141cfdcab9c47.bindTooltip(
+                `<div>
+                     Caleta Olivia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b6ea31f02b274a6b19b718034cfd674 = L.circleMarker(
+                [-51.62, -69.21],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_4b6ea31f02b274a6b19b718034cfd674.bindTooltip(
+                `<div>
+                     Río Gallegos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1db19be7e6a1b719f4c628d0bfab58da = L.circleMarker(
+                [-54.8, -68.3],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_1db19be7e6a1b719f4c628d0bfab58da.bindTooltip(
+                `<div>
+                     Ushuaia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e17292434d8a0929ae93a80cbe6edfd3 = L.polyline(
+                [[-32.89, -68.84], [-34.62, -68.33], [-35.47, -69.58], [-38.92, -68.09], [-38.9, -70.07], [-41.13, -71.31], [-42.91, -71.32], [-46.59, -70.93], [-51.62, -69.21]],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F4A261", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_e17292434d8a0929ae93a80cbe6edfd3.bindTooltip(
+                `<div>
+                     RN 40 — Mendoza → Patagonia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff02c4dce6ac5e9ce39428cfb86d26a3 = L.circleMarker(
+                [-32.89, -68.84],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_ff02c4dce6ac5e9ce39428cfb86d26a3.bindTooltip(
+                `<div>
+                     Mendoza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8beb874f006a87e8206ee61fedaeebf1 = L.circleMarker(
+                [-34.62, -68.33],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_8beb874f006a87e8206ee61fedaeebf1.bindTooltip(
+                `<div>
+                     San Rafael
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53007f05107bf9752e91e233153ca02d = L.circleMarker(
+                [-35.47, -69.58],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_53007f05107bf9752e91e233153ca02d.bindTooltip(
+                `<div>
+                     Malargüe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4eb89b37bf48000c1383df82726bceea = L.circleMarker(
+                [-38.92, -68.09],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_4eb89b37bf48000c1383df82726bceea.bindTooltip(
+                `<div>
+                     Neuquén
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8684b9da612d9738905611b7384187d = L.circleMarker(
+                [-38.9, -70.07],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_c8684b9da612d9738905611b7384187d.bindTooltip(
+                `<div>
+                     Zapala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f47fb76a2d8a6170818eacae6febb2df = L.circleMarker(
+                [-41.13, -71.31],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_f47fb76a2d8a6170818eacae6febb2df.bindTooltip(
+                `<div>
+                     Bariloche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b002905e142f51daafe41f02700f195 = L.circleMarker(
+                [-42.91, -71.32],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_6b002905e142f51daafe41f02700f195.bindTooltip(
+                `<div>
+                     Esquel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21816973d702ecd4952c6238fc679478 = L.circleMarker(
+                [-46.59, -70.93],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_21816973d702ecd4952c6238fc679478.bindTooltip(
+                `<div>
+                     Perito Moreno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dcfb288e0bfc8390360e53baf3a453e9 = L.circleMarker(
+                [-51.62, -69.21],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_dcfb288e0bfc8390360e53baf3a453e9.bindTooltip(
+                `<div>
+                     Río Gallegos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a2979d3f5376e857df60bead56f94e30 = L.polyline(
+                [[-34.61, -58.38], [-32.95, -60.64], [-31.73, -60.53], [-27.47, -58.83], [-29.71, -57.09], [-27.37, -55.9], [-27.48, -55.12], [-25.69, -54.44]],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#8338EC", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_a2979d3f5376e857df60bead56f94e30.bindTooltip(
+                `<div>
+                     RN 12 — Buenos Aires → Misiones
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f9e6ceb503ce1c4be00e2a4500a54105 = L.circleMarker(
+                [-34.61, -58.38],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_f9e6ceb503ce1c4be00e2a4500a54105.bindTooltip(
+                `<div>
+                     Buenos Aires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0dc8686e8ae1b155b62594628769019b = L.circleMarker(
+                [-32.95, -60.64],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_0dc8686e8ae1b155b62594628769019b.bindTooltip(
+                `<div>
+                     Rosario
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c30086f399a5a32d11421730e4db9110 = L.circleMarker(
+                [-31.73, -60.53],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_c30086f399a5a32d11421730e4db9110.bindTooltip(
+                `<div>
+                     Paraná
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f5becdd5318b9cfea931bc416116924f = L.circleMarker(
+                [-27.47, -58.83],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_f5becdd5318b9cfea931bc416116924f.bindTooltip(
+                `<div>
+                     Corrientes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_263a7bf924df6cbcfab72a6b99182761 = L.circleMarker(
+                [-29.71, -57.09],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_263a7bf924df6cbcfab72a6b99182761.bindTooltip(
+                `<div>
+                     Paso de los Libres
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fdc3d229c8ad87d27ce5d480c7ffedc9 = L.circleMarker(
+                [-27.37, -55.9],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_fdc3d229c8ad87d27ce5d480c7ffedc9.bindTooltip(
+                `<div>
+                     Posadas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7160562477d6d32aed1e38c0b6fb5bf = L.circleMarker(
+                [-27.48, -55.12],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_a7160562477d6d32aed1e38c0b6fb5bf.bindTooltip(
+                `<div>
+                     Oberá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_653fd83fd376a8de72d4bbdc6ea91dab = L.circleMarker(
+                [-25.69, -54.44],
+                {"bubblingMouseEvents": true, "color": "#8338EC", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8338EC", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_653fd83fd376a8de72d4bbdc6ea91dab.bindTooltip(
+                `<div>
+                     Iguazú
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_32d0939b6c76de48d96359817d4e6243 = L.polyline(
+                [[-27.45, -58.99], [-26.79, -60.44], [-25.5, -64.97], [-24.79, -65.41]],
+                {"bubblingMouseEvents": true, "color": "#FB5607", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FB5607", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_32d0939b6c76de48d96359817d4e6243.bindTooltip(
+                `<div>
+                     RN 16 — Chaco → Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7300f9752a3f28a56b323f676a310251 = L.circleMarker(
+                [-27.45, -58.99],
+                {"bubblingMouseEvents": true, "color": "#FB5607", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FB5607", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_7300f9752a3f28a56b323f676a310251.bindTooltip(
+                `<div>
+                     Resistencia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81bf7861fd87da14d96bc08ee40d41bc = L.circleMarker(
+                [-26.79, -60.44],
+                {"bubblingMouseEvents": true, "color": "#FB5607", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FB5607", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_81bf7861fd87da14d96bc08ee40d41bc.bindTooltip(
+                `<div>
+                     Roque Saenz Peña
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_849781916502d21574add5e6fe5420e6 = L.circleMarker(
+                [-25.5, -64.97],
+                {"bubblingMouseEvents": true, "color": "#FB5607", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FB5607", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_849781916502d21574add5e6fe5420e6.bindTooltip(
+                `<div>
+                     Metan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab1ea5189ffe9757a6708f0b51a45636 = L.circleMarker(
+                [-24.79, -65.41],
+                {"bubblingMouseEvents": true, "color": "#FB5607", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FB5607", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_ab1ea5189ffe9757a6708f0b51a45636.bindTooltip(
+                `<div>
+                     Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_77fc3ae2e9f5290d50e395c4528c4bb6 = L.polyline(
+                [[-31.63, -60.7], [-27.79, -64.26], [-24.19, -65.3]],
+                {"bubblingMouseEvents": true, "color": "#FFBE0B", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFBE0B", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_77fc3ae2e9f5290d50e395c4528c4bb6.bindTooltip(
+                `<div>
+                     RN 34 — Santa Fe → Jujuy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8efe1c450dad97dcb91e685d62e88497 = L.circleMarker(
+                [-31.63, -60.7],
+                {"bubblingMouseEvents": true, "color": "#FFBE0B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFBE0B", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_8efe1c450dad97dcb91e685d62e88497.bindTooltip(
+                `<div>
+                     Santa Fe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57ebc15720033fb5a08ccc04c7698968 = L.circleMarker(
+                [-27.79, -64.26],
+                {"bubblingMouseEvents": true, "color": "#FFBE0B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFBE0B", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_57ebc15720033fb5a08ccc04c7698968.bindTooltip(
+                `<div>
+                     Santiago Estero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_381f97f3bde210a8f60249cc5211675b = L.circleMarker(
+                [-24.19, -65.3],
+                {"bubblingMouseEvents": true, "color": "#FFBE0B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFBE0B", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_381f97f3bde210a8f60249cc5211675b.bindTooltip(
+                `<div>
+                     Jujuy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cc34e1884035ed58f61757bab6d8795e = L.polyline(
+                [[-26.18, -58.18], [-24.71, -60.59], [-23.21, -64.1], [-24.79, -65.41]],
+                {"bubblingMouseEvents": true, "color": "#06D6A0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#06D6A0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_cc34e1884035ed58f61757bab6d8795e.bindTooltip(
+                `<div>
+                     RN 81 — Formosa → Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6499f8cbe270a912a0f94490db3a7110 = L.circleMarker(
+                [-26.18, -58.18],
+                {"bubblingMouseEvents": true, "color": "#06D6A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#06D6A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_6499f8cbe270a912a0f94490db3a7110.bindTooltip(
+                `<div>
+                     Formosa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ad8baa7c75aa4844cffb565a35bce49f = L.circleMarker(
+                [-24.71, -60.59],
+                {"bubblingMouseEvents": true, "color": "#06D6A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#06D6A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_ad8baa7c75aa4844cffb565a35bce49f.bindTooltip(
+                `<div>
+                     Las Lomitas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_179853cc9b4e7ea41771953e3c259804 = L.circleMarker(
+                [-23.21, -64.1],
+                {"bubblingMouseEvents": true, "color": "#06D6A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#06D6A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_179853cc9b4e7ea41771953e3c259804.bindTooltip(
+                `<div>
+                     Embarcación
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16e2fe402cd82639f11b1c2065f0791d = L.circleMarker(
+                [-24.79, -65.41],
+                {"bubblingMouseEvents": true, "color": "#06D6A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#06D6A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_16e2fe402cd82639f11b1c2065f0791d.bindTooltip(
+                `<div>
+                     Salta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_52788d633c52ffda8b52586aeb02589d = L.polyline(
+                [[-31.53, -68.53], [-30.24, -68.75], [-28.47, -65.78], [-24.19, -65.3]],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3A86FF", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            poly_line_52788d633c52ffda8b52586aeb02589d.bindTooltip(
+                `<div>
+                     RN 40 Norte — San Juan → Catamarca → Jujuy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd5d03cd9e32c40ad96af033544ea2b6 = L.circleMarker(
+                [-31.53, -68.53],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_fd5d03cd9e32c40ad96af033544ea2b6.bindTooltip(
+                `<div>
+                     San Juan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_520e603b9459bc3f1fdff0c8db4153f7 = L.circleMarker(
+                [-30.24, -68.75],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_520e603b9459bc3f1fdff0c8db4153f7.bindTooltip(
+                `<div>
+                     Jachal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31241ed6303c2b0d490e253eeb138206 = L.circleMarker(
+                [-28.47, -65.78],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_31241ed6303c2b0d490e253eeb138206.bindTooltip(
+                `<div>
+                     Catamarca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64d037c141d412d6eea25e7431fb1f18 = L.circleMarker(
+                [-24.19, -65.3],
+                {"bubblingMouseEvents": true, "color": "#3A86FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A86FF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            circle_marker_64d037c141d412d6eea25e7431fb1f18.bindTooltip(
+                `<div>
+                     Jujuy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dc1e8633bc2672f61d3eddb36d03c0f7 = L.marker(
+                [-30.415, -65.515],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_b8f9fe46e3ab293a83aef136049968ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1643fa3f86993eee24e14d0dd58ca72 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dc646b8d8366e940babf4c9dfe03ee86 = $(`<div id="html_dc646b8d8366e940babf4c9dfe03ee86" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Córdoba → La Rioja<br><b>Distance:</b> 340 km<br><b>Corridor:</b> RN 9 — Buenos Aires → Salta</div>`)[0];
+                popup_f1643fa3f86993eee24e14d0dd58ca72.setContent(html_dc646b8d8366e940babf4c9dfe03ee86);
+            
+        
+
+        marker_dc1e8633bc2672f61d3eddb36d03c0f7.bindPopup(popup_f1643fa3f86993eee24e14d0dd58ca72)
+        ;
+
+        
+    
+    
+            marker_dc1e8633bc2672f61d3eddb36d03c0f7.bindTooltip(
+                `<div>
+                     🔴 Córdoba → La Rioja (340 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc1e8633bc2672f61d3eddb36d03c0f7.setIcon(icon_b8f9fe46e3ab293a83aef136049968ce);
+            
+    
+            var marker_cac588c90ac96c6c4c3fe86be50d6e67 = L.marker(
+                [-28.6, -65.555],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_dc70d11d8edb268142702b5f85e6e194 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09afa20a0b2be306f3d3254557e92510 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_db41c7278dc7266effc4d64a21a252a6 = $(`<div id="html_db41c7278dc7266effc4d64a21a252a6" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> La Rioja → Santiago Estero<br><b>Distance:</b> 310 km<br><b>Corridor:</b> RN 9 — Buenos Aires → Salta</div>`)[0];
+                popup_09afa20a0b2be306f3d3254557e92510.setContent(html_db41c7278dc7266effc4d64a21a252a6);
+            
+        
+
+        marker_cac588c90ac96c6c4c3fe86be50d6e67.bindPopup(popup_09afa20a0b2be306f3d3254557e92510)
+        ;
+
+        
+    
+    
+            marker_cac588c90ac96c6c4c3fe86be50d6e67.bindTooltip(
+                `<div>
+                     🔴 La Rioja → Santiago Estero (310 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cac588c90ac96c6c4c3fe86be50d6e67.setIcon(icon_dc70d11d8edb268142702b5f85e6e194);
+            
+    
+            var marker_aeaa6b46a96616a30961b8e5a5a0abce = L.marker(
+                [-33.935, -62.725],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_f23ea34917fe945cfa43a22524cdc739 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_915b69b6cffbb5f0b4310a850af6dac9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1ed3faac4f679c4cef363562b4aa25c2 = $(`<div id="html_1ed3faac4f679c4cef363562b4aa25c2" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Luján → San Luis<br><b>Distance:</b> 682 km<br><b>Corridor:</b> RN 7 — Buenos Aires → Mendoza</div>`)[0];
+                popup_915b69b6cffbb5f0b4310a850af6dac9.setContent(html_1ed3faac4f679c4cef363562b4aa25c2);
+            
+        
+
+        marker_aeaa6b46a96616a30961b8e5a5a0abce.bindPopup(popup_915b69b6cffbb5f0b4310a850af6dac9)
+        ;
+
+        
+    
+    
+            marker_aeaa6b46a96616a30961b8e5a5a0abce.bindTooltip(
+                `<div>
+                     🔴 Luján → San Luis (682 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aeaa6b46a96616a30961b8e5a5a0abce.setIcon(icon_f23ea34917fe945cfa43a22524cdc739);
+            
+    
+            var marker_96c1268df2eecbcdb7d4330f856855f3 = L.marker(
+                [-36.665, -60.325],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_0277e559a2ce57054c341d461c7662ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_749a6f1a7848561418a4324c5509468e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_641a75901c84af39190006ecc874f44d = $(`<div id="html_641a75901c84af39190006ecc874f44d" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Buenos Aires → Bahía Blanca<br><b>Distance:</b> 574 km<br><b>Corridor:</b> RN 3 — Buenos Aires → Ushuaia</div>`)[0];
+                popup_749a6f1a7848561418a4324c5509468e.setContent(html_641a75901c84af39190006ecc874f44d);
+            
+        
+
+        marker_96c1268df2eecbcdb7d4330f856855f3.bindPopup(popup_749a6f1a7848561418a4324c5509468e)
+        ;
+
+        
+    
+    
+            marker_96c1268df2eecbcdb7d4330f856855f3.bindTooltip(
+                `<div>
+                     🔴 Buenos Aires → Bahía Blanca (574 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_96c1268df2eecbcdb7d4330f856855f3.setIcon(icon_0277e559a2ce57054c341d461c7662ef);
+            
+    
+            var marker_c1842f3be806923887d35603d7264370 = L.marker(
+                [-44.315, -66.265],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_60e9241bbe05ed98d92acfde703105e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6fbfeb3c2ae01f8b97aaa8b159121aa0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8a70e38a67eed76d3b13bf3af2962ffe = $(`<div id="html_8a70e38a67eed76d3b13bf3af2962ffe" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Puerto Madryn → Comodoro<br><b>Distance:</b> 395 km<br><b>Corridor:</b> RN 3 — Buenos Aires → Ushuaia</div>`)[0];
+                popup_6fbfeb3c2ae01f8b97aaa8b159121aa0.setContent(html_8a70e38a67eed76d3b13bf3af2962ffe);
+            
+        
+
+        marker_c1842f3be806923887d35603d7264370.bindPopup(popup_6fbfeb3c2ae01f8b97aaa8b159121aa0)
+        ;
+
+        
+    
+    
+            marker_c1842f3be806923887d35603d7264370.bindTooltip(
+                `<div>
+                     🔴 Puerto Madryn → Comodoro (395 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1842f3be806923887d35603d7264370.setIcon(icon_60e9241bbe05ed98d92acfde703105e7);
+            
+    
+            var marker_db957fbc8e8442233db67c9c8413c11b = L.marker(
+                [-49.03, -68.365],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_f708af10bdb80085253702c6de07646c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1df31002d5749e47426d38f7130caee8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2c8dd2f66d0958989b0e27daf9a0dde0 = $(`<div id="html_2c8dd2f66d0958989b0e27daf9a0dde0" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Caleta Olivia → Río Gallegos<br><b>Distance:</b> 589 km<br><b>Corridor:</b> RN 3 — Buenos Aires → Ushuaia</div>`)[0];
+                popup_1df31002d5749e47426d38f7130caee8.setContent(html_2c8dd2f66d0958989b0e27daf9a0dde0);
+            
+        
+
+        marker_db957fbc8e8442233db67c9c8413c11b.bindPopup(popup_1df31002d5749e47426d38f7130caee8)
+        ;
+
+        
+    
+    
+            marker_db957fbc8e8442233db67c9c8413c11b.bindTooltip(
+                `<div>
+                     🔴 Caleta Olivia → Río Gallegos (589 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db957fbc8e8442233db67c9c8413c11b.setIcon(icon_f708af10bdb80085253702c6de07646c);
+            
+    
+            var marker_3f10220380009f0b9ffe752f7589c6d3 = L.marker(
+                [-53.209999999999994, -68.755],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_77cbeda414ff4af7a4a151c17b8d2346 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c102aca98dc503c0d87aca3582fc49b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6256cc9cb724093ea175377b1e920615 = $(`<div id="html_6256cc9cb724093ea175377b1e920615" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Río Gallegos → Ushuaia<br><b>Distance:</b> 359 km<br><b>Corridor:</b> RN 3 — Buenos Aires → Ushuaia</div>`)[0];
+                popup_0c102aca98dc503c0d87aca3582fc49b.setContent(html_6256cc9cb724093ea175377b1e920615);
+            
+        
+
+        marker_3f10220380009f0b9ffe752f7589c6d3.bindPopup(popup_0c102aca98dc503c0d87aca3582fc49b)
+        ;
+
+        
+    
+    
+            marker_3f10220380009f0b9ffe752f7589c6d3.bindTooltip(
+                `<div>
+                     🔴 Río Gallegos → Ushuaia (359 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f10220380009f0b9ffe752f7589c6d3.setIcon(icon_77cbeda414ff4af7a4a151c17b8d2346);
+            
+    
+            var marker_fabbfedef6709383dfe421f54a1aa5e4 = L.marker(
+                [-37.195, -68.83500000000001],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_ba8e5b963e46da35997e64191c034136 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0a094aaae6d42dee64397881b1fa114 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_038355a20491782916b2d9423a0136e1 = $(`<div id="html_038355a20491782916b2d9423a0136e1" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Malargüe → Neuquén<br><b>Distance:</b> 406 km<br><b>Corridor:</b> RN 40 — Mendoza → Patagonia</div>`)[0];
+                popup_c0a094aaae6d42dee64397881b1fa114.setContent(html_038355a20491782916b2d9423a0136e1);
+            
+        
+
+        marker_fabbfedef6709383dfe421f54a1aa5e4.bindPopup(popup_c0a094aaae6d42dee64397881b1fa114)
+        ;
+
+        
+    
+    
+            marker_fabbfedef6709383dfe421f54a1aa5e4.bindTooltip(
+                `<div>
+                     🔴 Malargüe → Neuquén (406 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fabbfedef6709383dfe421f54a1aa5e4.setIcon(icon_ba8e5b963e46da35997e64191c034136);
+            
+    
+            var marker_46dc3003ed5b9c3b3e21c5e326680ce6 = L.marker(
+                [-44.75, -71.125],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_15c0f0c7b6b9d44b877296f5e36f697b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ebeceb41e29e396c58b5f1ec7ab4beb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5667317d263bf4f38b7db199be9f8c54 = $(`<div id="html_5667317d263bf4f38b7db199be9f8c54" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Esquel → Perito Moreno<br><b>Distance:</b> 410 km<br><b>Corridor:</b> RN 40 — Mendoza → Patagonia</div>`)[0];
+                popup_3ebeceb41e29e396c58b5f1ec7ab4beb.setContent(html_5667317d263bf4f38b7db199be9f8c54);
+            
+        
+
+        marker_46dc3003ed5b9c3b3e21c5e326680ce6.bindPopup(popup_3ebeceb41e29e396c58b5f1ec7ab4beb)
+        ;
+
+        
+    
+    
+            marker_46dc3003ed5b9c3b3e21c5e326680ce6.bindTooltip(
+                `<div>
+                     🔴 Esquel → Perito Moreno (410 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_46dc3003ed5b9c3b3e21c5e326680ce6.setIcon(icon_15c0f0c7b6b9d44b877296f5e36f697b);
+            
+    
+            var marker_ef0b954243a49532cc7343c7574199c2 = L.marker(
+                [-49.105000000000004, -70.07],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_71206ee9252bce31fbb4cbb73f374890 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4d2a64e77d9355f0f5af06ea1ec9d2a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cb2f4a661c263c35da83c7e7f19262b4 = $(`<div id="html_cb2f4a661c263c35da83c7e7f19262b4" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Perito Moreno → Río Gallegos<br><b>Distance:</b> 573 km<br><b>Corridor:</b> RN 40 — Mendoza → Patagonia</div>`)[0];
+                popup_b4d2a64e77d9355f0f5af06ea1ec9d2a.setContent(html_cb2f4a661c263c35da83c7e7f19262b4);
+            
+        
+
+        marker_ef0b954243a49532cc7343c7574199c2.bindPopup(popup_b4d2a64e77d9355f0f5af06ea1ec9d2a)
+        ;
+
+        
+    
+    
+            marker_ef0b954243a49532cc7343c7574199c2.bindTooltip(
+                `<div>
+                     🔴 Perito Moreno → Río Gallegos (573 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef0b954243a49532cc7343c7574199c2.setIcon(icon_71206ee9252bce31fbb4cbb73f374890);
+            
+    
+            var marker_3b9d7558862a517894cd7f7fe36036b0 = L.marker(
+                [-29.6, -59.68],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_495f1bff44d0648f9a10df38521abedd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13994861c518bc216a1a111b2019f2be = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b9c275ae62f3143e6506c51ede9588f9 = $(`<div id="html_b9c275ae62f3143e6506c51ede9588f9" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Paraná → Corrientes<br><b>Distance:</b> 501 km<br><b>Corridor:</b> RN 12 — Buenos Aires → Misiones</div>`)[0];
+                popup_13994861c518bc216a1a111b2019f2be.setContent(html_b9c275ae62f3143e6506c51ede9588f9);
+            
+        
+
+        marker_3b9d7558862a517894cd7f7fe36036b0.bindPopup(popup_13994861c518bc216a1a111b2019f2be)
+        ;
+
+        
+    
+    
+            marker_3b9d7558862a517894cd7f7fe36036b0.bindTooltip(
+                `<div>
+                     🔴 Paraná → Corrientes (501 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b9d7558862a517894cd7f7fe36036b0.setIcon(icon_495f1bff44d0648f9a10df38521abedd);
+            
+    
+            var marker_351f5f6a548c2b5845f667364d41ad93 = L.marker(
+                [-28.59, -57.96],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_971c5f18f9ffc39364ab42740867d46e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_90846ccb9ae1f44fd619de7b1215c656 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dbeabfd13e5d6bb2fce52181404ade3a = $(`<div id="html_dbeabfd13e5d6bb2fce52181404ade3a" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Corrientes → Paso de los Libres<br><b>Distance:</b> 301 km<br><b>Corridor:</b> RN 12 — Buenos Aires → Misiones</div>`)[0];
+                popup_90846ccb9ae1f44fd619de7b1215c656.setContent(html_dbeabfd13e5d6bb2fce52181404ade3a);
+            
+        
+
+        marker_351f5f6a548c2b5845f667364d41ad93.bindPopup(popup_90846ccb9ae1f44fd619de7b1215c656)
+        ;
+
+        
+    
+    
+            marker_351f5f6a548c2b5845f667364d41ad93.bindTooltip(
+                `<div>
+                     🔴 Corrientes → Paso de los Libres (301 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_351f5f6a548c2b5845f667364d41ad93.setIcon(icon_971c5f18f9ffc39364ab42740867d46e);
+            
+    
+            var marker_1278db51a04a3d805440a8c3fcad36d9 = L.marker(
+                [-26.145, -62.705],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_ef64fdd3e9527f4c5df1779a6a2406e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a5c842ac69c2fadc40406382c7e53e9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f9233ce884551a041aa6942d1ebc71b = $(`<div id="html_7f9233ce884551a041aa6942d1ebc71b" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Roque Saenz Peña → Metan<br><b>Distance:</b> 474 km<br><b>Corridor:</b> RN 16 — Chaco → Salta</div>`)[0];
+                popup_3a5c842ac69c2fadc40406382c7e53e9.setContent(html_7f9233ce884551a041aa6942d1ebc71b);
+            
+        
+
+        marker_1278db51a04a3d805440a8c3fcad36d9.bindPopup(popup_3a5c842ac69c2fadc40406382c7e53e9)
+        ;
+
+        
+    
+    
+            marker_1278db51a04a3d805440a8c3fcad36d9.bindTooltip(
+                `<div>
+                     🔴 Roque Saenz Peña → Metan (474 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1278db51a04a3d805440a8c3fcad36d9.setIcon(icon_ef64fdd3e9527f4c5df1779a6a2406e7);
+            
+    
+            var marker_39645ca700205f2c6604f6b54df5aa5b = L.marker(
+                [-29.71, -62.480000000000004],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_10c52685bd12f4eff8274a7a61b31dba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68f557ef54c13517500b46a78a5fa209 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_084342be44297e3754e7d5e040a619e8 = $(`<div id="html_084342be44297e3754e7d5e040a619e8" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Santa Fe → Santiago Estero<br><b>Distance:</b> 548 km<br><b>Corridor:</b> RN 34 — Santa Fe → Jujuy</div>`)[0];
+                popup_68f557ef54c13517500b46a78a5fa209.setContent(html_084342be44297e3754e7d5e040a619e8);
+            
+        
+
+        marker_39645ca700205f2c6604f6b54df5aa5b.bindPopup(popup_68f557ef54c13517500b46a78a5fa209)
+        ;
+
+        
+    
+    
+            marker_39645ca700205f2c6604f6b54df5aa5b.bindTooltip(
+                `<div>
+                     🔴 Santa Fe → Santiago Estero (548 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39645ca700205f2c6604f6b54df5aa5b.setIcon(icon_10c52685bd12f4eff8274a7a61b31dba);
+            
+    
+            var marker_3c7acb59b7de77b59438812228e5bb3e = L.marker(
+                [-25.990000000000002, -64.78],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_9c99c72e784c71269d4f1e6a45310545 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f71bf9cf84cd59fd346c59b9f34df0f6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3d40a64645e04a9936da52aa682e32c6 = $(`<div id="html_3d40a64645e04a9936da52aa682e32c6" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Santiago Estero → Jujuy<br><b>Distance:</b> 414 km<br><b>Corridor:</b> RN 34 — Santa Fe → Jujuy</div>`)[0];
+                popup_f71bf9cf84cd59fd346c59b9f34df0f6.setContent(html_3d40a64645e04a9936da52aa682e32c6);
+            
+        
+
+        marker_3c7acb59b7de77b59438812228e5bb3e.bindPopup(popup_f71bf9cf84cd59fd346c59b9f34df0f6)
+        ;
+
+        
+    
+    
+            marker_3c7acb59b7de77b59438812228e5bb3e.bindTooltip(
+                `<div>
+                     🔴 Santiago Estero → Jujuy (414 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c7acb59b7de77b59438812228e5bb3e.setIcon(icon_9c99c72e784c71269d4f1e6a45310545);
+            
+    
+            var marker_be43f1662f54c87610fe4494485e66f1 = L.marker(
+                [-23.96, -62.345],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_137c4fe68a3fa6735f40a85463146143 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e22e8024b2088646f712aaa73d09b07 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a2f849e2a3c69d3717bb6059dc8b33b1 = $(`<div id="html_a2f849e2a3c69d3717bb6059dc8b33b1" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Las Lomitas → Embarcación<br><b>Distance:</b> 394 km<br><b>Corridor:</b> RN 81 — Formosa → Salta</div>`)[0];
+                popup_1e22e8024b2088646f712aaa73d09b07.setContent(html_a2f849e2a3c69d3717bb6059dc8b33b1);
+            
+        
+
+        marker_be43f1662f54c87610fe4494485e66f1.bindPopup(popup_1e22e8024b2088646f712aaa73d09b07)
+        ;
+
+        
+    
+    
+            marker_be43f1662f54c87610fe4494485e66f1.bindTooltip(
+                `<div>
+                     🔴 Las Lomitas → Embarcación (394 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be43f1662f54c87610fe4494485e66f1.setIcon(icon_137c4fe68a3fa6735f40a85463146143);
+            
+    
+            var marker_2d46d8dad52ad19207a4aab5e93fc556 = L.marker(
+                [-29.354999999999997, -67.265],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_681012cad03e0f787c9e956923a524e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a34c62bed2b57bbf8ee441fdef111c0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_200072ba11071edbd0a7767ee221f39d = $(`<div id="html_200072ba11071edbd0a7767ee221f39d" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Jachal → Catamarca<br><b>Distance:</b> 349 km<br><b>Corridor:</b> RN 40 Norte — San Juan → Catamarca → Jujuy</div>`)[0];
+                popup_4a34c62bed2b57bbf8ee441fdef111c0.setContent(html_200072ba11071edbd0a7767ee221f39d);
+            
+        
+
+        marker_2d46d8dad52ad19207a4aab5e93fc556.bindPopup(popup_4a34c62bed2b57bbf8ee441fdef111c0)
+        ;
+
+        
+    
+    
+            marker_2d46d8dad52ad19207a4aab5e93fc556.bindTooltip(
+                `<div>
+                     🔴 Jachal → Catamarca (349 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d46d8dad52ad19207a4aab5e93fc556.setIcon(icon_681012cad03e0f787c9e956923a524e7);
+            
+    
+            var marker_5bf8244b169d920e9bf2d1a743c85d05 = L.marker(
+                [-26.33, -65.53999999999999],
+                {
+}
+            ).addTo(map_bc15ac985ad57ec6b465902395efc7c8);
+        
+    
+            var icon_14041da67a1e1107e780d7966ae29c6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6081be733ee4965a9f954e76d66e9332 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1bd48acb7a2958e6f262bdbd27799187 = $(`<div id="html_1bd48acb7a2958e6f262bdbd27799187" style="width: 100.0%; height: 100.0%;"><b>Gap:</b> Catamarca → Jujuy<br><b>Distance:</b> 478 km<br><b>Corridor:</b> RN 40 Norte — San Juan → Catamarca → Jujuy</div>`)[0];
+                popup_6081be733ee4965a9f954e76d66e9332.setContent(html_1bd48acb7a2958e6f262bdbd27799187);
+            
+        
+
+        marker_5bf8244b169d920e9bf2d1a743c85d05.bindPopup(popup_6081be733ee4965a9f954e76d66e9332)
+        ;
+
+        
+    
+    
+            marker_5bf8244b169d920e9bf2d1a743c85d05.bindTooltip(
+                `<div>
+                     🔴 Catamarca → Jujuy (478 km)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5bf8244b169d920e9bf2d1a743c85d05.setIcon(icon_14041da67a1e1107e780d7966ae29c6e);
+            
+</script>
+</html>
